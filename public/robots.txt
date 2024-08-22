@@ -1,0 +1,188 @@
+User-agent: *
+User-agent: Applebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Googlebot
+User-agent: msnbot
+User-agent: Slurp
+User-agent: YandexBot
+Disallow: /
+Allow: /$
+Allow: /*.html$
+Allow: /favicon.png$
+Crawl-delay: 10
+
+# favicon bots
+User-agent: DuckDuckGo-Favicons-Bot
+Disallow: /
+Allow: /favicon.png$
+Crawl-delay: 120
+
+# Internet Archive
+User-agent: ia_archiver
+Disallow:
+Allow: /
+Crawl-delay: 120
+
+# unnecessary
+User-agent: adidxbot
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
+User-agent: APIs-Google
+User-agent: Baiduspider # aint no one from china gonna be visiting
+User-agent: Baiduspider-video
+User-agent: CCBot
+User-agent: DOC
+User-agent: FeedFetcher-Google
+User-agent: Feedly
+User-agent: Google-Extended
+User-agent: Google-Safety
+User-agent: Googlebot-News
+User-agent: GoogleOther
+User-agent: GoogleProducer
+User-agent: Mediapartners-Google
+User-agent: Mediapartners-Google*
+User-agent: Googlebot-Video
+User-agent: Googlebot-Image
+User-agent: msnbot-media
+User-agent: MSNBot-Media
+User-agent: Pinterest
+User-agent: Storebot-Google
+User-agent: UbiCrawler
+User-agent: wget
+User-agent: wget*
+User-agent: Zao
+Disallow: /
+Crawl-delay: 120
+
+# evil robots (copying websites, spamming, bad behavior, etc.)
+User-agent: *Download*
+User-agent: Acunetix
+User-agent: Adbeat
+User-agent: adscanner
+User-agent: AhrefsBot
+User-agent: AspiegelBot
+User-agent: BackDoorBot
+User-agent: BackDoorBot/1.0
+User-agent: BacklinkCrawler
+User-agent: Big Brother
+User-agent: BLEXBot
+User-agent: Bytespider
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Collector
+User-agent: Comscore
+User-agent: Comscore / Proximic
+User-agent: CyberPatrol SiteCat Webbot
+User-agent: Cyotek WebCopy
+User-agent: dotbot
+User-agent: DotBot
+User-agent: Download\ Demon
+User-agent: Download\ Devil
+User-agent: Download\ Wonder
+User-agent: Download Demon/*
+User-agent: Download Ninja
+User-agent: EasyDL
+User-agent: EirGrabber
+User-agent: EmailCollector
+User-agent: EmailSiphon
+User-agent: EmailWolf
+User-agent: Facebook
+User-agent: FacebookBot
+User-agent: facebookcatalog
+User-agent: facebookexternalhit
+User-agent: facebookexternalhit/*
+User-agent: facebot
+User-agent: fast
+User-agent: Fetch
+User-agent: FHscan
+User-agent: fr-crawler
+User-agent: grub-client
+User-agent: HTTrack
+User-agent: HTTrack*
+User-agent: jobs.de-Robot
+User-agent: k2spider
+User-agent: larbin
+User-agent: libwww
+User-agent: linko
+User-agent: magpie-crawler
+User-agent: MauiBot
+User-agent: meanpathbot
+User-agent: megaindex.com
+User-agent: MegaIndex.ru
+User-agent: Microsoft.URL.Control
+User-agent: MJ12bot
+User-agent: MSIECrawler
+User-agent: Nessus
+User-agent: NESSUS::SOAP
+User-agent: Nessus/*
+User-agent: Nessus/190402
+User-agent: NPBot
+User-agent: oBot
+User-agent: Octoparse
+User-agent: Offline Explorer
+User-agent: OkHttp library
+User-agent: PetalBot
+User-agent: Proximic
+User-agent: robofox
+User-agent: Screaming Frog
+User-agent: Screaming Frog SEO Spider
+User-agent: SearchmetricsBot
+User-agent: SeekportBot
+User-agent: SemrushBot
+User-agent: SEMrushBot
+User-agent: SEOdiver
+User-agent: SEOkicks-Robot
+User-agent: SISTRIX
+User-agent: sistrix
+User-agent: SISTRIX Crawler
+User-agent: sitecheck.internetseer.com
+User-agent: Sitechecker
+User-agent: SiteSnagger
+User-agent: Sogou blog
+User-agent: Sogou inst spider
+User-agent: Sogou News Spider
+User-agent: Sogou Orion spider
+User-agent: Sogou spider2
+User-agent: Sogou web spider
+User-agent: spbot
+User-agent: SurveyBot
+User-agent: Teleport
+User-agent: TeleportPro
+User-agent: UnisterBot
+User-agent: WebCopier
+User-agent: WebReaper
+User-agent: WebStripper
+User-agent: WebZIP
+User-agent: wotbox
+User-agent: Xenu
+User-agent: Zealbot
+User-agent: ZyBORG
+Disallow: /
+Crawl-delay: 120
+
+# anti skid
+User-agent: *python*
+User-agent: *Python*
+User-agent: python-httpx/*
+User-agent: python-httpx/0.23.3
+User-agent: python-requests/*
+User-agent: python-requests/2.28.1
+User-agent: python-urllib3/*
+User-agent: python-urllib3/1.26.12
+User-agent: Python-urllib/*
+User-agent: Python-urllib/2.7
+User-agent: Python/* aiohttp/*
+User-agent: Python/* aiohttp/3.8.1
+User-agent: Python/3.8 aiohttp/*
+User-agent: Python/3.8 aiohttp/3.8.1
+Disallow: /
+Crawl-delay: 120
+
+# shh
+User-agent: shadow government
+User-agent: nsa
+User-agent: cia
+User-agent: fbi
+Disallow: /
+Crawl-delay: 120

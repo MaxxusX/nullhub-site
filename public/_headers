@@ -1,0 +1,14 @@
+/*
+  Content-Security-Policy: default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'none';frame-ancestors 'none';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+  Access-Control-Allow-Origin: *
+  Cross-Origin-Resource-Policy: cross-origin
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Origin-Agent-Cluster: ?1
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: DENY
+  X-Permitted-Cross-Domain-Policies: none
+  X-XSS-Protection: 0
+  X-DNS-Prefetch-Control: on
+  Referrer-Policy: no-referrer

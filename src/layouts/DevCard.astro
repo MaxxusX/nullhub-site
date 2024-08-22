@@ -1,0 +1,68 @@
+---
+interface Props {
+	image: string;
+	name: string;
+	role: string;
+}
+
+const { image, name, role } = Astro.props;
+---
+
+<section class="DevCard">
+	<img src={image} class="DevCard-Icon" />
+	<h2 class="DevCard-Name">{name}</h2>
+	<p class="DevCard-Role">- {role} -</p>
+	<p class="DevCard-Desc">
+		<slot />
+	</p>
+</section>
+
+<style>
+	.DevCard {
+		padding: 1rem;
+		margin: 0;
+		width: 9rem;
+		display: inline-block;
+		background-color: var(--ui-color);
+		text-align: center;
+
+		> .DevCard-Icon {
+			display: block;
+			width: 9rem;
+			height: 9rem;
+			aspect-ratio: 1/1;
+			margin: 0;
+			margin-bottom: 0.5rem;
+			padding: 0;
+		}
+
+		> .DevCard-Name {
+			padding: 0;
+			margin: 0;
+		}
+
+		> .DevCard-Role {
+			margin: 0;
+			padding: 0;
+			color: #bbb;
+			font-style: italic;
+		}
+
+		> .DevCard-Desc {
+			margin: 0;
+			margin-top: 0.4rem;
+			padding: 0;
+			color: #ccc;
+
+			> :nth-child(1) {
+				padding-top: 0;
+				margin-top: 0;
+			}
+
+			> :last-child {
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+</style>

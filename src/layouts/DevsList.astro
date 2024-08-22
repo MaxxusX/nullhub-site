@@ -1,0 +1,40 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class="DevsList">
+	<h2 class="DevsList-Title">{title}</h2>
+	<div class="DevsList-Content">
+		<slot />
+	</div>
+</section>
+
+<style>
+	.DevsList {
+		display: table;
+		box-sizing: border-box;
+		text-indent: 0;
+		background-color: var(--ui-color);
+		padding: 1rem;
+		margin-top: 30px;
+	}
+
+	.DevsList-Title {
+		background-color: #5553;
+		border: 0.1rem #0003 solid;
+		padding: 0.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.DevsList-Content {
+		margin-top: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		text-align: center;
+	}
+</style>

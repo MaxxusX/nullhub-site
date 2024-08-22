@@ -1,0 +1,39 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class="TextSection">
+	<h2 class="TextSection-Title">{title}</h2>
+	<p class="TextSection-Content">
+		<slot />
+	</p>
+</section>
+
+<style>
+	.TextSection {
+		display: table;
+		box-sizing: border-box;
+		text-indent: 0;
+		background-color: var(--ui-color);
+		padding: 1rem;
+		margin-top: 30px;
+	}
+
+	.TextSection-Title {
+		background-color: #5553;
+		border: 0.1rem #0003 solid;
+		padding: 0.3rem;
+		margin-bottom: 1rem;
+	}
+
+	.TextSection-Content {
+		margin-top: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+</style>
