@@ -1,0 +1,62 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3
+        with:
+          version: "latest"
+          package_json_file: "./package.json"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          cache: "pnpm"
+          cache-dependency-path: "./pnpm-lock.yaml"
+
+      - name: Install
+        shell: "bash"
+        working-directory: .
+        run: pnpm install
+
+      - name: Disable Astro Telemetry
+        shell: "bash"
+        working-directory: .
+        run: pnpm astro telemetry disable
+
+      - name: Build
+        shell: "bash"
+        working-directory: .
+        run: NODE_ENV=development MODE=development PROD=false DEV=true pnpm run build
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./dist/"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
