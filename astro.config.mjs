@@ -2,14 +2,14 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://nullhub.pages.dev",
+	site: "https://maxxusx.github.io/nullhub-site/",
 	base: "/",
 	trailingSlash: "ignore",
 	output: "static",
 	compressHTML: true,
 	build: {
 		format: "file",
-		inlineStylesheets: `never`,
+		inlineStylesheets: "never",
 	},
 	server: {
 		host: false,
@@ -17,10 +17,6 @@ export default defineConfig({
 	},
 	devToolbar: {
 		enabled: false,
-	},
-	prefetch: {
-		prefetchAll: true,
-		defaultStrategy: "viewport",
 	},
 	image: {
 		// Example: Enable the Sharp-based image service with a custom config
