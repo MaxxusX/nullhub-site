@@ -1,34 +1,41 @@
 # nullhub site
-yeah we use astro now<br>
-it's nice but it has some annoying things
+made w/ astro
 
-also, this site is an example of an **acceptable** usecase, ***upio*** 😡<br>
-if i didn't have those devcards, it would be **overkill** and ***useless*** <sub>*(like you)*</sub>
+<sub>this site is an example of an **acceptable** usecase, ***upio*** 😡<br>
+if i didn't have those devcards, it would be *overkill* and *useless,* ***like you***</sub>
 
 ## how to edit this site
-some prequesites here;<br>
-*please* read the [Astro documentation](https://docs.astro.build) if you aren't familiar with Astro.
-furthermore, ***DO NOT EDIT THIS REPO.***
+i love when people do my job for me, but **DO NOT EDIT THIS REPO.**
 
 if you want to make a change:
-1. fork this repo
-2. make your changes on that fork
-3. ***TEST YOUR CHANGES. NO EXCEPTIONS.***
-4. sumbit a pull request to this repo
-5. send me a dm on discord (@maxxusx) and ask me to review your pr.
-6. wait *patiently*. i have a life outside of nullhub.
+1. familiarize yourself with [Astro](https://astro.build) if you haven't already
+2. fork this repo
+3. make your changes on that fork
+4. ***TEST YOUR CHANGES***
+5. sumbit a pull request to this repo
+6. send me a dm on discord (`@maxxusx`) and ask me to review your pr.
+7. wait *patiently.* contrary to popular belief, i ***do*** have a life.
+8. if i think it's a good change, i'll merge it.
 
-<hr>
+if you'd like, you can also leave little messages in your code.<br>
+HTML:
+```html
+<!-- maxxus was here -->
+```
+Javascript:
+```js
+// amogus -maxxus
 
-## Commands
+/*
+oops
+just rm -rf'd the db
+does linux have undo? 😇
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+-maxxus
+*/
+```
+CSS:
+```css
+/* oh hell nah who did this -maxxus */
+```
+<!-- you can also leave comments in markdown 🤫 -->
