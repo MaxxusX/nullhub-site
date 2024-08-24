@@ -6,6 +6,8 @@ interface Props {
 const { title } = Astro.props;
 
 import "./vars.css";
+import receptionBlurImage from "../images/reception_blur.webp"
+import faviconTransparentImage from "../images/favicon_transparent.png"
 ---
 
 <!doctype html>
@@ -14,8 +16,8 @@ import "./vars.css";
 		<meta charset="UTF-8" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width" />
-                <link rel="preload" href="./img/reception_blur.webp" as="image" fetchpriority="high" referrerpolicy="no-referrer" />
-		<link rel="icon" href="./img/favicon_transparent.png" type="image/png" fetchpriority="low" referrerpolicy="no-referrer" />
+                <link rel="preload" href={receptionBlurImage.src} as="image" fetchpriority="high" referrerpolicy="no-referrer" />
+		<link rel="icon" href={faviconTransparentImage.src} fetchpriority="low" referrerpolicy="no-referrer" />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -35,7 +37,7 @@ import "./vars.css";
 		line-height: 1.6;
 		font-size: 19px;
 		margin: 0;
-		background: url("./img/reception_blur.webp") fixed no-repeat center
+		background: url({receptionBlurImage.src}) fixed no-repeat center
 			top/100lvw 100lvh #13151a;
 		overflow: hidden scroll;
 	}
