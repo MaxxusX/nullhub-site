@@ -3,6 +3,8 @@ import DevCard from "../layouts/DevCard.astro";
 import DevsList from "../layouts/DevsList.astro";
 import Page from "../layouts/Page.astro";
 import TextSection from "../layouts/TextSection.astro";
+
+import maxxusImage from "../images/maxxus.png";
 ---
 
 <Page title="NullHub">
@@ -28,7 +30,7 @@ import TextSection from "../layouts/TextSection.astro";
 	</TextSection>
 
 	<DevsList title="Our Developers">
-		<DevCard image="../images/maxxus.png" name="maxxus" role="website dev">
+		<DevCard image={maxxusImage} name="maxxus" role="website dev">
 			coolest nullhub dev
 		</DevCard>
 	</DevsList>
