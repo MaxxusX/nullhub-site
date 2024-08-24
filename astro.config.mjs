@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,12 +19,14 @@ export default defineConfig({
 		enabled: false,
 	},
 	image: {
-		// Example: Enable the Sharp-based image service with a custom config
+		service: passthroughImageService(), // temp. cannot install sharp rn.
+		/*
 		service: {
 			config: {
 				limitInputPixels: false,
 			},
 		},
+  		*/
 	},
 	vite: {
 		css: {
