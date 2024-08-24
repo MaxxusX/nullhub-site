@@ -4,6 +4,16 @@ made w/ astro
 <sub>this site is an example of an **acceptable** usecase, ***upio*** 😡<br>
 if i didn't have those devcards, it would be *overkill* and *useless,* ***like you***</sub>
 
+## todo
+* [ ] move components from /layouts/ to /components/
+* [ ] make sure the html, css, and js is being minified
+* [ ] add social links
+* [ ] add secrets
+* [ ] add other devs
+  * [ ] rob: owner
+  * [ ] spidey: co-owner
+  * [ ] cat_person: contributor
+
 ## how to edit this site
 i love when people do my job for me, but **DO NOT EDIT THIS REPO.**
 
