@@ -38,7 +38,7 @@ jobs:
       - name: Disable Astro Telemetry
         shell: "bash"
         working-directory: .
-        run: pnpm astro telemetry disable
+        run: pnpm run astro telemetry disable
 
       - name: Build
         shell: "bash"
