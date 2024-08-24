@@ -35,15 +35,10 @@ jobs:
         working-directory: .
         run: pnpm install
 
-      - name: Disable Astro Telemetry
-        shell: "bash"
-        working-directory: .
-        run: pnpm run astro telemetry disable
-
       - name: Build
         shell: "bash"
         working-directory: .
-        run: NODE_ENV=development MODE=development PROD=false DEV=true pnpm run build
+        run: NODE_ENV=development MODE=development PROD=false DEV=true ASTRO_TELEMETRY_DISABLED=1 pnpm run build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
