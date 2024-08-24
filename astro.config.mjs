@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://maxxusx.github.io/nullhub-site/",
-	base: "/",
+	base: "/nullhub-site/",
 	trailingSlash: "ignore",
 	output: "static",
 	compressHTML: true,
