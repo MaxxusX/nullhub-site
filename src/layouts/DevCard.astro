@@ -1,18 +1,18 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 interface Props {
-	image: string;
+	image: ImageMetadata;
 	name: string;
 	role: string;
 }
 
-import { Image } from 'astro:assets';
-
 const { image, name, role } = Astro.props;
-const dynImage = import(image);
 ---
 
 <section class="DevCard">
-	<Image src={dynImage} quality="max" class="DevCard-Icon" alt="" />
+	<Image src={image} quality="max" class="DevCard-Icon" alt="" />
 	<h2 class="DevCard-Name">{name}</h2>
 	<p class="DevCard-Role">- {role} -</p>
 	<p class="DevCard-Desc">
