@@ -1,8 +1,7 @@
 ---
 import DevCard from "../layouts/DevCard.astro";
-import DevsList from "../layouts/DevsList.astro";
 import Page from "../layouts/Page.astro";
-import TextSection from "../layouts/TextSection.astro";
+import Section from "../layouts/Section.astro";
 
 import maxxusImage from "../images/maxxus.png";
 ---
@@ -16,7 +15,7 @@ import maxxusImage from "../images/maxxus.png";
 		<span class="imprtnt">wide array of supported games</span>.
 	</p>
 
-	<TextSection title="FAQ">
+	<Section title="FAQ">
 		<b>Q.</b> What information do you log?<br />
 		<b>A.</b> We log HWIDs to prevent premium users from sharing their NullHub+<br
 		/>
@@ -27,11 +26,11 @@ import maxxusImage from "../images/maxxus.png";
 			target="_blank"
 			rel="noreferrer noopener external">here</a
 		>
-	</TextSection>
+	</Section>
 
-	<DevsList title="Our Developers">
+	<Section title="Our Developers" centered>
 		<DevCard image={maxxusImage} name="maxxus" role="website dev">
 			coolest nullhub dev
 		</DevCard>
-	</DevsList>
+	</Section>
 </Page>
