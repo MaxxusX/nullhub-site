@@ -1,15 +1,15 @@
 ---
 interface Props {
 	title: string;
-	center: boolean?;
+	nopadx: boolean?;
 }
 
-const { title, center } = Astro.props;
+const { title, nopadx } = Astro.props;
 ---
 
 <section class="Section">
 	<h2 class="Section-Title">{title}</h2>
-	<div class="Section-Content" {center && "data-center"}>
+	<div class:list={[ "Section-Content", {"Section-Content-NoPadX": nopadx} ]}>
 		<slot />
 	</div>
 </section>
@@ -37,7 +37,16 @@ const { title, center } = Astro.props;
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
-	.Section-Content[data-center] {
-		text-align: center;
+
+	.Section-Content-NoPadX {
+		> :first-child {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 </style>
