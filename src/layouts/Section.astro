@@ -1,15 +1,16 @@
 ---
 interface Props {
 	title: string;
+	centered?: boolean;
 	nopadx?: boolean;
 }
 
-const { title, nopadx } = Astro.props;
+const { title, centered, nopadx } = Astro.props;
 ---
 
 <section class="Section">
 	<h2 class="Section-Title">{title}</h2>
-	<div class:list={[ "Section-Content", {"Section-Content-NoPadX": nopadx} ]}>
+	<div class:list={[ "Section-Content", {"Section-Content-Centered": centered} {"Section-Content-NoPadX": nopadx} ]}>
 		<slot />
 	</div>
 </section>
@@ -36,6 +37,10 @@ const { title, nopadx } = Astro.props;
 		padding-top: 0;
 		margin-bottom: 0;
 		padding-bottom: 0;
+	}
+
+	.Section-Content-Centered {
+		text-align: center;
 	}
 
 	.Section-Content-NoPadX {
