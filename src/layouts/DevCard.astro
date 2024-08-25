@@ -42,6 +42,7 @@ const { image, name, role } = Astro.props;
 		> .DevCard-Name {
 			padding: 0;
 			margin: 0;
+			text-align: center;
 		}
 
 		> .DevCard-Role {
@@ -49,6 +50,7 @@ const { image, name, role } = Astro.props;
 			padding: 0;
 			color: #bbb;
 			font-style: italic;
+			text-align: center;
 		}
 
 		> .DevCard-Desc {
@@ -56,8 +58,9 @@ const { image, name, role } = Astro.props;
 			margin-top: 0.4rem;
 			padding: 0;
 			color: #ccc;
+			text-align: center;
 
-			> :nth-child(1) {
+			> :first-child {
 				padding-top: 0;
 				margin-top: 0;
 			}
