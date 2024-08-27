@@ -1,9 +1,6 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
-
 interface Props {
-	image: ImageMetadata;
+	image: string;
 	name: string;
 	role: string;
 }
@@ -12,7 +9,7 @@ const { image, name, role } = Astro.props;
 ---
 
 <section class="DevCard">
-	<Image src={image} quality="max" class="DevCard-Icon" alt="" />
+	<img src={image} class="DevCard-Icon" decoding="async" loading="lazy" alt="" />
 	<h2 class="DevCard-Name">{name}</h2>
 	<p class="DevCard-Role">- {role} -</p>
 	<p class="DevCard-Desc">

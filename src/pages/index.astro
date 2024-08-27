@@ -2,8 +2,6 @@
 import DevCard from "../components/DevCard.astro";
 import Section from "../components/Section.astro";
 import Page from "../layouts/Page.astro";
-
-import maxxusImage from "../assets/maxxus.png";
 ---
 
 <Page title="NullHub">
@@ -29,6 +27,8 @@ import maxxusImage from "../assets/maxxus.png";
 	</Section>
 
 	<Section title="Our Developers" centered>
-		<DevCard image={maxxusImage} name="maxxus" role="website dev"> coolest nullhub dev </DevCard>
+		<DevCard image="/img/maxxus.webp?v=1" name="maxxus" role="website dev">
+			coolest nullhub dev
+		</DevCard>
 	</Section>
 </Page>

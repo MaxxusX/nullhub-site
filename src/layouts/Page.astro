@@ -16,25 +16,30 @@ const { title } = Astro.props;
 
 		<link
 			rel="preload"
-			href="/img/reception_blur.webp"
+			href="/img/reception_blur.webp?v=1"
 			as="image"
 			fetchpriority="high"
 			referrerpolicy="no-referrer"
 		/>
 		<link
 			rel="preload"
-			href="/img/favicon.webp"
+			href="/img/favicon.webp?v=1"
 			as="image"
 			fetchpriority="low"
 			referrerpolicy="no-referrer"
 		/>
 
-		<link rel="icon" href="/img/favicon.webp" fetchpriority="low" referrerpolicy="no-referrer" />
+		<link
+			rel="icon"
+			href="/img/favicon.webp?v=1"
+			fetchpriority="low"
+			referrerpolicy="no-referrer"
+		/>
 		<title>{title}</title>
 	</head>
 	<body>
 		<header>
-			<img src="/img/favicon.webp" class="icon" decoding="async" loading="lazy" alt="" />
+			<img src="/img/favicon.webp?v=1" class="icon" decoding="async" loading="lazy" alt="" />
 		</header>
 		<main>
 			<slot />
@@ -58,7 +63,7 @@ const { title } = Astro.props;
 		line-height: 1.6;
 		font-size: 19px;
 		margin: 0;
-		background: url("/img/favicon.webp") fixed no-repeat center top/100lvw 100lvh #13151a;
+		background: url("/img/favicon.webp?v=1") fixed no-repeat center top/100lvw 100lvh #13151a;
 		overflow: hidden scroll;
 	}
 
