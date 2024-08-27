@@ -12,7 +12,7 @@ importers:
         specifier: ^0.9.3
         version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       astro:
-        specifier: ^4.14.2
+        specifier: ^4.14.5
         version: 4.14.5(lightningcss@1.26.0)(rollup@4.21.1)(typescript@5.5.4)
       lightningcss:
         specifier: ^1.26.0
