@@ -37,4 +37,4 @@ jobs:
       - name: Test
         shell: "bash"
         working-directory: .
-        run: ASTRO_TELEMETRY_DISABLED=1 pnpm astro check --minimumFailingSeverity hint
+        run: ASTRO_TELEMETRY_DISABLED=1 pnpm run test
