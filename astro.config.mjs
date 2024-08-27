@@ -26,7 +26,7 @@ export default defineConfig({
 				limitInputPixels: false,
 			},
 		},
-  		*/
+			*/
 	},
 	vite: {
 		css: {

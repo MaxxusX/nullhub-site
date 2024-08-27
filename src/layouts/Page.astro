@@ -5,10 +5,10 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { Image } from 'astro:assets';
-import receptionBlurImage from "../images/reception_blur.webp"
-import faviconTransparentImage from "../images/favicon_transparent.png"
-import "./vars.css";
+import { Image } from "astro:assets";
+import faviconTransparentImage from "../assets/favicon_transparent.png";
+import receptionBlurImage from "../assets/reception_blur.webp";
+import "../assets/vars.css";
 ---
 
 <!doctype html>
@@ -17,8 +17,19 @@ import "./vars.css";
 		<meta charset="UTF-8" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width" />
-                <link rel="preload" href={receptionBlurImage.src} as="image" fetchpriority="high" referrerpolicy="no-referrer" />
-		<link rel="icon" href={faviconTransparentImage.src} fetchpriority="low" referrerpolicy="no-referrer" />
+		<link
+			rel="preload"
+			href={receptionBlurImage.src}
+			as="image"
+			fetchpriority="high"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="icon"
+			href={faviconTransparentImage.src}
+			fetchpriority="low"
+			referrerpolicy="no-referrer"
+		/>
 		<title>{title}</title>
 	</head>
 	<body>
@@ -38,8 +49,7 @@ import "./vars.css";
 		line-height: 1.6;
 		font-size: 19px;
 		margin: 0;
-		background: var(--bgImg) fixed no-repeat center
-			top/100lvw 100lvh #13151a;
+		background: var(--bgImg) fixed no-repeat center top/100lvw 100lvh #13151a;
 		overflow: hidden scroll;
 	}
 
