@@ -41,6 +41,11 @@ jobs:
         working-directory: .
         run: pnpm install
 
+      - name: Test
+        shell: "bash"
+        working-directory: .
+        run: ASTRO_TELEMETRY_DISABLED=1 pnpm run test
+
       - name: Build
         shell: "bash"
         working-directory: .

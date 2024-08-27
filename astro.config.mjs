@@ -31,6 +31,16 @@ export default defineConfig({
 	vite: {
 		css: {
 			transformer: "lightningcss",
+			lightningcss: {
+				targets: browserslistToTargets(
+					browserslist(
+						">0.2% or last 3 versions or Firefox ESR and fully supports es6-module and fully supports es6-module-dynamic-import and not dead and not op_mini all and not and_uc 15 and not and_qq 14 and not kaios 3"
+					)
+				),
+			},
+		},
+		build: {
+			cssMinify: "lightningcss",
 		},
 	},
 });

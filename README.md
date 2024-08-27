@@ -8,7 +8,8 @@ if i didn't have those devcards, it would be _overkill_ and _useless,_ **_like y
 ## todo
 
 - [x] move components from /layouts/ to /components/
-- [ ] make sure the html, css, and js is being minified
+- [x] make sure the html, css, and js is being minified
+- [ ] target browserslist of `>0.2% or last 3 versions or Firefox ESR and fully supports es6-module and fully supports es6-module-dynamic-import and not dead and not op_mini all and not and_uc 15 and not and_qq 14 and not kaios 3` for javascript ([what browsers are those?](https://browsersl.ist/#q=%3E0.2%25+or+last+3+versions+or+Firefox+ESR+and+fully+supports+es6-module+and+fully+supports+es6-module-dynamic-import+and+not+dead+and+not+op_mini+all+and+not+and_uc+15+and+not+and_qq+14+and+not+kaios+3))
 - [ ] add social links
 - [ ] add secrets
 - [ ] add other devs

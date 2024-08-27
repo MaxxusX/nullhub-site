@@ -8,14 +8,19 @@ User-agent: Slurp
 User-agent: YandexBot
 Disallow: /
 Allow: /$
+Allow: /*/$
 Allow: /*.html$
-Allow: /favicon.png$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
 Crawl-delay: 10
 
 # favicon bots
 User-agent: DuckDuckGo-Favicons-Bot
 Disallow: /
-Allow: /favicon.png$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
 Crawl-delay: 120
 
 # Internet Archive
@@ -53,6 +58,7 @@ User-agent: wget
 User-agent: wget*
 User-agent: Zao
 Disallow: /
+Allow:
 Crawl-delay: 120
 
 # evil robots (copying websites, spamming, bad behavior, etc.)
@@ -159,6 +165,7 @@ User-agent: Xenu
 User-agent: Zealbot
 User-agent: ZyBORG
 Disallow: /
+Allow:
 Crawl-delay: 120
 
 # anti skid
@@ -177,6 +184,7 @@ User-agent: Python/* aiohttp/3.8.1
 User-agent: Python/3.8 aiohttp/*
 User-agent: Python/3.8 aiohttp/3.8.1
 Disallow: /
+Allow:
 Crawl-delay: 120
 
 # shh
@@ -185,4 +193,5 @@ User-agent: nsa
 User-agent: cia
 User-agent: fbi
 Disallow: /
+Allow:
 Crawl-delay: 120
