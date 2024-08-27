@@ -3,7 +3,7 @@
 made w/ astro
 
 <sub>this site is an example of an **acceptable** usecase, **_upio_** 😡<br>
-if i didn't have those devcards, it would be _overkill_ and _useless,_ **_like you_**</sub>
+if i didn't have those devcards, it would be _overkill_ and _useless,_ **_like you_** 😡😡</sub>
 
 ## todo
 
