@@ -1,4 +1,5 @@
 import { defineConfig, passthroughImageService } from "astro/config";
+import { browserslistToTargets } from "lightningcss";
 
 // https://astro.build/config
 export default defineConfig({
