@@ -9,10 +9,7 @@ if i didn't have those devcards, it would be _overkill_ and _useless,_ **_like y
 
 - [ ] add social links
 - [ ] add secrets
-- [ ] add other devs
-  - [ ] rob: owner
-  - [ ] spidey: co-owner
-  - [ ] cat_person: contributor
+- [ ]
 
 ## how to edit this site
 
