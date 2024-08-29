@@ -9,7 +9,6 @@ if i didn't have those devcards, it would be _overkill_ and _useless,_ **_like y
 
 - [ ] add social links
 - [ ] add secrets
-- [ ]
 
 ## how to edit this site
 
