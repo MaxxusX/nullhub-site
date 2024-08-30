@@ -1,6 +1,6 @@
 /*
   Access-Control-Allow-Origin: *
-  Content-Security-Policy: default-src 'self';base-uri 'self';font-src 'self' https:;form-action 'none';frame-ancestors 'none';img-src 'self' https: data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https:;upgrade-insecure-requests
+  Content-Security-Policy: default-src 'none';base-uri 'self';font-src 'self';form-action 'none';frame-ancestors 'none';img-src 'self' data:;media-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' 'unsafe-inline';upgrade-insecure-requests
   Cross-Origin-Resource-Policy: cross-origin
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Embedder-Policy: require-corp
@@ -13,5 +13,5 @@
   X-DNS-Prefetch-Control: on
   Referrer-Policy: no-referrer
 
-/img/*
+/_astro/*
   Cache-Control: max-age=31536000, immutable

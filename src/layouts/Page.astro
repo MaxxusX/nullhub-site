@@ -4,10 +4,13 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import favicon from "../assets/favicon.webp";
+import reception_blur from "../assets/reception_blur.webp";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" style={`--bg: url(${reception_blur.src})`}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -16,40 +19,25 @@ const { title } = Astro.props;
 
 		<link
 			rel="preload"
-			href="/nullhub-site/img/reception_blur.webp?v=1"
+			href={reception_blur.src}
 			as="image"
 			fetchpriority="high"
 			referrerpolicy="no-referrer"
 		/>
-		<link
-			rel="preload"
-			href="/nullhub-site/img/favicon.webp?v=1"
-			as="image"
-			fetchpriority="low"
-			referrerpolicy="no-referrer"
-		/>
 
-		<link
-			rel="icon"
-			href="/nullhub-site/img/favicon.webp?v=1"
-			fetchpriority="low"
-			referrerpolicy="no-referrer"
-		/>
+		<link rel="icon" href={favicon.src} fetchpriority="low" referrerpolicy="no-referrer" />
 		<title>{title}</title>
 	</head>
 	<body>
+		<!--
 		<header>
-			<img
-				src="/nullhub-site/img/favicon.webp?v=1"
-				class="icon"
-				decoding="async"
-				loading="lazy"
-				alt=""
-			/>
+			<Image src={favicon} class="icon" alt="NullHub Logo" />
 		</header>
 		<main>
 			<slot />
 		</main>
+	-->
+		<slot />
 	</body>
 </html>
 
@@ -59,8 +47,11 @@ const { title } = Astro.props;
 			Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 		--font-code: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
-		--ui-color: #0003;
+		--ui-color: #0004;
 		--header-color: #0001;
+		--outline: 2px solid #f009;
+
+		color-scheme: dark;
 	}
 
 	html {
@@ -69,16 +60,25 @@ const { title } = Astro.props;
 		line-height: 1.6;
 		font-size: 19px;
 		margin: 0;
-		background: url("/nullhub-site/img/reception_blur.webp?v=1") fixed no-repeat center top/100lvw
-			100lvh #13151a;
-		overflow: hidden visible;
+		background: var(--bg) fixed no-repeat center top/100lvw 100lvh #13151a;
+		overflow-x: hidden;
 	}
 
 	body {
 		margin: 0;
-		overflow: hidden scroll;
+		overflow-x: hidden;
+
+		padding: 5dvh 5dvh;
+		padding-top: 3dvh;
+		display: grid;
+		align-items: center;
+		align-content: space-around;
+		justify-content: center;
+		justify-items: stretch;
+		background-color: var(--ui-color);
 	}
 
+	/*
 	header {
 		padding: 0.15rem;
 		background-color: var(--header-color);
@@ -106,12 +106,11 @@ const { title } = Astro.props;
 		justify-content: center;
 		justify-items: stretch;
 		background-color: var(--ui-color);
+		outline: var(--outline);
 		backdrop-filter: blur(5px);
-		border-radius: 1rem;
 	}
 	@media (max-width: 50rem) {
 		main {
-			border-radius: 0;
 			margin: 0 auto;
 			padding: 0;
 			padding-top: 0.5rem;
@@ -120,6 +119,7 @@ const { title } = Astro.props;
 			width: 100dvw;
 		}
 	}
+	*/
 
 	h1,
 	h2 {
@@ -146,7 +146,7 @@ const { title } = Astro.props;
 	a {
 		font-weight: 600;
 		color: #ddd;
-		text-decoration: underline solid #66f 2px;
+		text-decoration: underline solid #44f 2px;
 	}
 
 	.icon {
