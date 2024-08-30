@@ -5,17 +5,25 @@ interface Props {
 
 const { title } = Astro.props;
 
+if (!Astro.site) throw new Error("pls define the site url in the config thx");
+
 import favicon from "../assets/favicon.webp";
 import reception_blur from "../assets/reception_blur.webp";
+import SEO from "../components/SEO.astro";
 ---
 
 <!doctype html>
 <html lang="en" style={`--bg: url(${reception_blur.src})`}>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-
-		<meta name="description" content="" />
+		<SEO
+			url={Astro.site}
+			sitename="NullHub"
+			title={title}
+			desc="NullHub is a powerful Roblox script hub with countless features and a wide array of supported games."
+			tags="nullhub, roblox, hacks, scripts, exploits, script hub"
+			icon={favicon}
+			iconAlt="NullHub Logo"
+		/>
 
 		<link
 			rel="preload"
@@ -24,9 +32,6 @@ import reception_blur from "../assets/reception_blur.webp";
 			fetchpriority="high"
 			referrerpolicy="no-referrer"
 		/>
-
-		<link rel="icon" href={favicon.src} fetchpriority="low" referrerpolicy="no-referrer" />
-		<title>{title}</title>
 	</head>
 	<body>
 		<!--
