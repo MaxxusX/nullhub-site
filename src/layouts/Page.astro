@@ -13,7 +13,7 @@ import SEO from "../components/SEO.astro";
 ---
 
 <!doctype html>
-<html lang="en" style={`--bg: url(${reception_blur.src})`}>
+<html lang="en" style={`--bg: url(${encodeURI(reception_blur.src)})`}>
 	<head>
 		<SEO
 			url={Astro.site}
