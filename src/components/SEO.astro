@@ -9,14 +9,16 @@ interface Props {
 	tags: string; // "nullhub, roblox, hacks, scripts, exploits, script hub"
 	icon: ImageMetadata;
 	iconAlt: string; // NullHub Logo
+	themeColor: string;
 }
 
-const { url, sitename, pagename, desc, tags, icon, iconAlt } = Astro.props;
+const { url, sitename, pagename, desc, tags, icon, iconAlt, themeColor } = Astro.props;
 const pagetitle = `${sitename} | ${pagename}`;
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content={themeColor ?? "#000"} />
 
 <meta name="referrer" content="no-referrer" />
 <meta name="robots" content="index,follow" />
