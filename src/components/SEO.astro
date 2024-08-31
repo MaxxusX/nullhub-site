@@ -11,8 +11,8 @@ interface Props {
 	iconAlt: string; // NullHub Logo
 }
 
-const { url, sitename, title, desc, tags, icon, iconAlt } = Astro.props;
-const pagetitle = `${sitename} | ${title}`;
+const { url, sitename, pagename, desc, tags, icon, iconAlt } = Astro.props;
+const pagetitle = `${sitename} | ${pagename}`;
 ---
 
 <meta charset="UTF-8" />
