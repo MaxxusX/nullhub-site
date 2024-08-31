@@ -4,23 +4,24 @@ import type { ImageMetadata } from "astro";
 interface Props {
 	url: URL;
 	sitename: string;
-	title: string;
+	pagename: string;
 	desc: string; // NullHub is a powerful Roblox script hub with countless features and a wide array of supported games.
 	tags: string; // "nullhub, roblox, hacks, scripts, exploits, script hub"
 	icon: ImageMetadata;
 	iconAlt: string; // NullHub Logo
 }
 
-const { url, sitename, title, desc, tags, icon, iconAlt } = Astro.props;
+const { url, sitename, pagename, desc, tags, icon, iconAlt } = Astro.props;
+const pagetitle = `${sitename} | ${pagename}`;
 ---
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <meta name="referrer" content="no-referrer" />
 <meta name="robots" content="index,follow" />
 
-<title>{title}</title>
+<title>{pagetitle}</title>
 <meta name="description" content={desc} />
 <meta name="keywords" content={tags} />
 <link rel="icon" href={icon.src} fetchpriority="low" referrerpolicy="no-referrer" />
@@ -31,7 +32,7 @@ const { url, sitename, title, desc, tags, icon, iconAlt } = Astro.props;
 
 <meta name="og:type" content="website" />
 <meta name="og:site_name" content={sitename} />
-<meta name="og:title" content={title} />
+<meta name="og:title" content={pagetitle} />
 <meta name="og:description" content={desc} />
 <meta name="og:url" content={url} />
 
@@ -40,7 +41,7 @@ const { url, sitename, title, desc, tags, icon, iconAlt } = Astro.props;
 <meta name="og:image:width" content={icon.width.toString()} />
 <meta name="og:image:height" content={icon.height.toString()} />
 
-<meta name="twitter:title" content={title} />
+<meta name="twitter:title" content={pagetitle} />
 <meta name="twitter:description" content={desc} />
 <meta name="twitter:image:src" content={new URL(icon.src, url)} />
 <meta name="twitter:card" content="summary_large_image" />
