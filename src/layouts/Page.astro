@@ -35,7 +35,10 @@ import SEO from "../components/SEO.astro";
 		/>
 	</head>
 	<body>
-		<slot />
+		<div id="bgimage"></div>
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 
@@ -54,17 +57,34 @@ import SEO from "../components/SEO.astro";
 	}
 
 	html {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
 		font-family: var(--font-sans);
-		color: #ddd;
 		line-height: 1.6;
 		font-size: 19px;
-		margin: 0;
-		overflow-x: hidden;
+		color: #ddd;
 	}
 
 	body {
 		margin: 0;
-		overflow-x: hidden;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	#bgimage {
+		position: fixed;
+		margin: 0;
+		padding: 0;
+		width: 100dvw;
+		height: 100dvh;
+		background: var(--bg) fixed no-repeat center top/cover border-box var(--fallback-bg-color); /* top/100lvw 100lvh */
+		z-index: -1;
+	}
+
+	main {
+		position: absolute;
+		margin: 0;
 		padding: 5dvh 5dvh;
 		padding-top: 3dvh;
 		display: grid;
@@ -72,8 +92,7 @@ import SEO from "../components/SEO.astro";
 		align-content: space-around;
 		justify-content: center;
 		justify-items: stretch;
-		background: var(--bg) scroll no-repeat center top/cover border-box var(--fallback-bg-color); /* top/100lvw 100lvh */
-		/*background-color: var(--ui-color);*/
+		background-color: var(--ui-color);
 	}
 
 	h1,
