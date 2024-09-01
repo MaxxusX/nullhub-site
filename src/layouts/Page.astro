@@ -59,7 +59,7 @@ import SEO from "../components/SEO.astro";
 	html {
 		margin: 0;
 		padding: 0;
-		overflow: hidden;
+		overflow-x: hidden;
 		font-family: var(--font-sans);
 		line-height: 1.6;
 		font-size: 19px;
@@ -69,10 +69,11 @@ import SEO from "../components/SEO.astro";
 	body {
 		margin: 0;
 		padding: 0;
-		overflow: hidden;
+		overflow-x: hidden;
 	}
 
 	#bgimage {
+		overflow: visible;
 		position: fixed;
 		margin: 0;
 		padding: 0;
@@ -83,7 +84,7 @@ import SEO from "../components/SEO.astro";
 	}
 
 	main {
-		overflow: hidden scroll;
+		overflow-x: hidden;
 		position: absolute;
 		margin: 0;
 		padding: 5dvh 5dvh;
