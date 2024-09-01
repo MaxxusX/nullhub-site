@@ -63,7 +63,7 @@ const { image, name, role } = Astro.props;
 			text-align: center;
 			line-height: 1.25;
 
-			> br {
+			> :is-global(br) {
 				line-height: 1.75;
 			}
 
