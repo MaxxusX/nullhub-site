@@ -13,7 +13,7 @@ import SEO from "../components/SEO.astro";
 ---
 
 <!doctype html>
-<html lang="en" style={`--bg: url(${encodeURI(reception_blur.src)})`}>
+<html lang="en">
 	<head>
 		<SEO
 			url={Astro.site}
@@ -35,7 +35,7 @@ import SEO from "../components/SEO.astro";
 		/>
 	</head>
 	<body>
-		<div id="bgimage"></div>
+		<img src={reception_blur.src} id="bgimage" alt="" loading="lazy" decoding="async"></img>
 		<main>
 			<slot />
 		</main>
@@ -79,7 +79,7 @@ import SEO from "../components/SEO.astro";
 		padding: 0;
 		width: 100dvw;
 		height: 100dvh;
-		background: var(--bg) fixed no-repeat center top/cover border-box var(--fallback-bg-color); /* top/100lvw 100lvh */
+		/* background: var(--bg) fixed no-repeat center top/cover border-box var(--fallback-bg-color); */
 		z-index: -1;
 	}
 
