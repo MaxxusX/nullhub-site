@@ -15,9 +15,9 @@ const { image, name, role } = Astro.props;
 	<Image src={image} class="DevCard-Icon" alt="" />
 	<h2 class="DevCard-Name">{name}</h2>
 	<p class="DevCard-Role">- {role} -</p>
-	<p class="DevCard-Desc">
+	<div class="DevCard-Desc">
 		<slot />
-	</p>
+	</div>
 </section>
 
 <style>
