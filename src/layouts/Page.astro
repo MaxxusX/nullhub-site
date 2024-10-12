@@ -35,7 +35,7 @@ import SEO from "../components/SEO.astro";
 		/>
 	</head>
 	<body>
-		<img src={reception_blur.src} id="bgimage" alt="" loading="lazy" decoding="async"></img>
+		<!-- img src={reception_blur.src} id="bgimage" alt="" loading="lazy" decoding="async"></img -->
 		<main>
 			<slot />
 		</main>
@@ -70,9 +70,11 @@ import SEO from "../components/SEO.astro";
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
-		background-color: var(--fallback-bg-color);
+		background: var(--bg) fixed no-repeat center top/cover border-box var(--fallback-bg-color);
+		/* background-color: var(--fallback-bg-color); */
 	}
 
+	/*
 	#bgimage {
 		overflow: visible;
 		position: fixed;
@@ -83,6 +85,7 @@ import SEO from "../components/SEO.astro";
 		/* background: var(--bg) fixed no-repeat center top/cover border-box var(--fallback-bg-color); */
 		z-index: -1;
 	}
+	*/
 
 	main {
 		overflow-x: hidden;
