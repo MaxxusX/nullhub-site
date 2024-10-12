@@ -3,8 +3,8 @@ import { defineConfig, passthroughImageService } from "astro/config";
 const isProd = import.meta.env.PROD;
 
 export default defineConfig({
-	site: "https://maxxusx.github.io/nullhub-site/",
-	base: "/nullhub-site/",
+	site: "https://maxxusx.github.io/nullfire-site/",
+	base: "/nullfire-site/",
 	trailingSlash: "ignore",
 	output: "static",
 	compressHTML: isProd,
