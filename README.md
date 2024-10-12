@@ -1,9 +1,6 @@
-# nullhub site
+# nullfire site
 
 made w/ astro
-
-<sub>this site is an example of an **acceptable** usecase, **_upio_** 😡<br>
-if i didn't have those devcards, it would be _overkill_ and _useless,_ **_like you_** 😡😡</sub>
 
 ## todo
 
@@ -26,30 +23,6 @@ if you want to make a change:
 8. if i think it's a good change, i'll merge it.
 
 if you'd like, you can also leave little messages in your code.<br>
-HTML:
-
-```html
-<!-- maxxus was here -->
-```
-
-Javascript:
-
-```js
-// amogus -maxxus
-
-/*
-oops
-just rm -rf'd the db
-does linux have undo? 😇
-
--maxxus
-*/
-```
-
-CSS:
-
-```css
+```javascript
 /* oh hell nah who did this -maxxus */
 ```
-
-<!-- you can also leave comments in markdown 🤫 -->
