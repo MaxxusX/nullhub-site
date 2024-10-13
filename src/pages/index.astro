@@ -1,5 +1,6 @@
 ---
-import Card from "../components/Card.astro";
+import DevCard from "../components/DevCard.astro";
+import SocialCard from "../components/SocialCard.astro";
 import List from "../components/List.astro";
 import Section from "../components/Section.astro";
 import Page from "../layouts/Page.astro";
@@ -22,39 +23,42 @@ import img_spidey from "../assets/spidey.webp";
 		<p class="no-pad-y">
 			<b>Q.</b> What information do you log?<br />
 			<b>A.</b> We log HWIDs to prevent premium users from sharing their NullFire+<br />
-			<br />
-			<b>Q.</b> Do you have a Discord?<br />
-			<b>A.</b> We do! Join it <a
-				href="https://dsc.gg/nullfire"
-				target="_blank"
-				rel="noreferrer noopener external">here</a
-			>
 		</p>
 	</Section>
 
 	<Section title="Our Developers">
 		<List>
-			<Card image={img_rob} name="rob" role="owner">
+			<DevCard image={img_rob} name="rob" role="owner">
 				<p>main dev</p>
 				<p>does pretty much all the work</p>
-			</Card>
-			<Card image={img_spidey} name="spidey" role="co-owner">
+			</DevCard>
+			<DevCard image={img_spidey} name="spidey" role="co-owner">
 				<p>mr spooder</p>
-			</Card>
-			<Card image={img_maxxus} name="maxxus" role="website dev">
+			</DevCard>
+			<DevCard image={img_maxxus} name="maxxus" role="website dev">
 				<p>coolest nullhub dev</p>
 				<p>not gay</p>
-			</Card>
-			<Card image={img_catperson} name="cat_person" role="contributer">
+			</DevCard>
+			<DevCard image={img_catperson} name="cat_person" role="contributer">
 				<p>contributed scripts for doors and pressure</p>
-			</Card>
+			</DevCard>
 		</List>
 	</Section>
 
 	<Section title="Our Socials">
 		<List>
-			<Card image={img_rob} name="Discord">dsc.gg/nullfire</Card>
-			<Card image={img_spidey} name="Twitter">@nullhub</Card>
+			<SocialCard
+				image={img_rob}
+				platform="Discord"
+				username="dsc.gg/nullfire"
+				link="https://dsc.gg/nullfire"
+			/>
+			<SocialCard
+				image={img_spidey}
+				platform="Twitter"
+				username="@nullhub"
+				link="https://x.com/nullhub"
+			/>
 		</List>
 	</Section>
 </Page>
