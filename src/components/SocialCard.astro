@@ -1,0 +1,30 @@
+---
+interface Props {
+	image: ImageMetadata;
+	platform: string;
+	username: string;
+	link: string;
+}
+
+const { image, platform, username, link } = Astro.props;
+
+import Card from "Card.astro";
+---
+
+<a class="SocialCard-Link" target="_blank" rel="noreferrer noopener external" href={link}>
+	<Card image={image} title={platform}>
+		<p class="SocialCard-Username">{username}</p>
+	</Card>
+</a>
+
+<style>
+	/*
+	.SocialCard-Link {
+		
+	}
+	*/
+
+        .SocialCard-Username {
+		color: #bbb;
+        }
+</style>
