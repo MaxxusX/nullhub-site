@@ -34,7 +34,7 @@ import SEO from "../components/SEO.astro";
 			referrerpolicy="no-referrer"
 		/>
 	</head>
-	<body style={`background: url('${reception_blur.src}') fixed no-repeat center top/cover border-box #0e0f13;`}>
+	<body style={`background-image: url('${reception_blur.src}');`}>
 		<main>
 			<slot />
 		</main>
@@ -47,6 +47,7 @@ import SEO from "../components/SEO.astro";
 			Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 		--font-code: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace, monospace;
+		--fallback-bg-color: #0e0f13; /* #13151a; */
 		--ui-color: #0004;
 		--header-color: #0001;
 		--outline: 2px solid #f009;
@@ -68,6 +69,7 @@ import SEO from "../components/SEO.astro";
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
+		background: fixed no-repeat center top/cover border-box var(--fallback-bg-color);
 	}
 
 	main {
