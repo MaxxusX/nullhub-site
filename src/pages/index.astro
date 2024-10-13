@@ -1,6 +1,6 @@
 ---
 import DevCard from "../components/DevCard.astro";
-import DevsList from "../components/DevsList.astro";
+import List from "../components/List.astro";
 import Section from "../components/Section.astro";
 import Page from "../layouts/Page.astro";
 
@@ -33,7 +33,7 @@ import img_spidey from "../assets/spidey.webp";
 	</Section>
 
 	<Section title="Our Developers">
-		<DevsList>
+		<List>
 			<DevCard image={img_rob} name="rob" role="owner">
 				<p>main dev</p>
 				<p>does pretty much all the work</p>
@@ -48,6 +48,6 @@ import img_spidey from "../assets/spidey.webp";
 			<DevCard image={img_catperson} name="cat_person" role="contributer">
 				<p>contributed scripts for doors and pressure</p>
 			</DevCard>
-		</DevsList>
+		</List>
 	</Section>
 </Page>
