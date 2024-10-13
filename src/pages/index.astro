@@ -1,5 +1,5 @@
 ---
-import DevCard from "../components/DevCard.astro";
+import Card from "../components/Card.astro";
 import List from "../components/List.astro";
 import Section from "../components/Section.astro";
 import Page from "../layouts/Page.astro";
@@ -34,29 +34,27 @@ import img_spidey from "../assets/spidey.webp";
 
 	<Section title="Our Developers">
 		<List>
-			<DevCard image={img_rob} name="rob" role="owner">
+			<Card image={img_rob} name="rob" role="owner">
 				<p>main dev</p>
 				<p>does pretty much all the work</p>
-			</DevCard>
+			</Card>
 			<DevCard image={img_spidey} name="spidey" role="co-owner">
 				<p>mr spooder</p>
-			</DevCard>
-			<DevCard image={img_maxxus} name="maxxus" role="website dev">
+			</Card>
+			<Card image={img_maxxus} name="maxxus" role="website dev">
 				<p>coolest nullhub dev</p>
 				<p>not gay</p>
-			</DevCard>
-			<DevCard image={img_catperson} name="cat_person" role="contributer">
+			</Card>
+			<Card image={img_catperson} name="cat_person" role="contributer">
 				<p>contributed scripts for doors and pressure</p>
-			</DevCard>
+			</Card>
 		</List>
 	</Section>
 
 	<Section title="Our Socials">
 		<List>
-			<DevCard image={img_rob} name="" role=""></DevCard>
-			<DevCard image={img_spidey} name="" role=""></DevCard>
-			<DevCard image={img_maxxus} name="" role=""></DevCard>
-			<DevCard image={img_catperson} name="" role=""></DevCard>
+			<Card image={img_rob} name="Discord">dsc.gg/nullfire</Card>
+			<Card image={img_spidey} name="Twitter">@nullhub</Card>
 		</List>
 	</Section>
 </Page>
