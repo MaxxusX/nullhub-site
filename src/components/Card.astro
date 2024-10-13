@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 interface Props {
 	image: ImageMetadata;
 	name: string;
-	role?: string;
+	role: string;
 }
 
 const { image, name, role } = Astro.props;
@@ -13,11 +13,8 @@ const { image, name, role } = Astro.props;
 
 <section class="Card">
 	<Image src={image} class="Card-Icon" alt="" />
-	<h2 class="Card-Name">{name}</h2>
-	{role && <p class="Card-Role">- {role} -</p>}
-	<div class="Card-Desc">
-		<slot />
-	</div>
+	<h2 class="Card-Title">{title}</h2>
+	<slot />
 </section>
 
 <style>
@@ -43,29 +40,8 @@ const { image, name, role } = Astro.props;
 			outline: var(--outline);
 		}
 
-		> .Card-Name {
+		> .Card-Title {
 			margin-top: 0.5rem;
-		}
-
-		> .Card-Role {
-			font-style: italic;
-			color: #bbb;
-		}
-
-		> .Card-Desc {
-			margin-top: 0.4rem;
-			text-align: center;
-			line-height: 1.25;
-			color: #ccc;
-
-			> :global(*) {
-				padding: 0;
-				margin: 0;
-
-				&:global(:not(:first-child)) {
-					margin-top: 0.35rem;
-				}
-			}
 		}
 	}
 </style>
