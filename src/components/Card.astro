@@ -4,11 +4,10 @@ import { Image } from "astro:assets";
 
 interface Props {
 	image: ImageMetadata;
-	name: string;
-	role: string;
+	title: string;
 }
 
-const { image, name, role } = Astro.props;
+const { image, title } = Astro.props;
 ---
 
 <section class="Card">
@@ -27,7 +26,7 @@ const { image, name, role } = Astro.props;
 		outline: var(--outline);
 		text-align: center;
 
-		> * {
+		> :global(*) {
 			padding: 0;
 			margin: 0;
 		}
