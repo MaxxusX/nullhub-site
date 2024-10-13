@@ -5,23 +5,23 @@ import { Image } from "astro:assets";
 interface Props {
 	image: ImageMetadata;
 	name: string;
-	role: string;
+	role: string?;
 }
 
 const { image, name, role } = Astro.props;
 ---
 
-<section class="DevCard">
-	<Image src={image} class="DevCard-Icon" alt="" />
-	<h2 class="DevCard-Name">{name}</h2>
-	<p class="DevCard-Role">- {role} -</p>
-	<div class="DevCard-Desc">
+<section class="Card">
+	<Image src={image} class="Card-Icon" alt="" />
+	<h2 class="Card-Name">{name}</h2>
+	{role && <p class="Card-Role">- {role} -</p>}
+	<div class="Card-Desc">
 		<slot />
 	</div>
 </section>
 
 <style>
-	.DevCard {
+	.Card {
 		padding: 1rem;
 		margin: 0;
 		width: 9rem;
@@ -35,7 +35,7 @@ const { image, name, role } = Astro.props;
 			margin: 0;
 		}
 
-		> .DevCard-Icon {
+		> .Card-Icon {
 			display: block;
 			width: 9rem;
 			height: 9rem;
@@ -43,16 +43,16 @@ const { image, name, role } = Astro.props;
 			outline: var(--outline);
 		}
 
-		> .DevCard-Name {
+		> .Card-Name {
 			margin-top: 0.5rem;
 		}
 
-		> .DevCard-Role {
+		> .Card-Role {
 			font-style: italic;
 			color: #bbb;
 		}
 
-		> .DevCard-Desc {
+		> .Card-Desc {
 			margin-top: 0.4rem;
 			text-align: center;
 			line-height: 1.25;
