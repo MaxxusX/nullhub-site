@@ -11,8 +11,8 @@ interface Props {
 const { image, title, socialIcon } = Astro.props;
 ---
 
-<section class:list={[ "Card", { "Card-Social": socialIcon } ]}>
-	<Image src={image} class="Card-Icon" crossorigin="anonymous" referrerpolicy="no-referrer" aria-hidden="true" alt="" />
+<section class="Card">
+	<Image src={image} class:list={[ "Card-Icon", { "Card-Icon-Social": socialIcon } ]} crossorigin="anonymous" referrerpolicy="no-referrer" aria-hidden="true" alt="" />
 	<h2 class="Card-Title">{title}</h2>
 	<slot />
 </section>
@@ -32,14 +32,6 @@ const { image, title, socialIcon } = Astro.props;
 			padding: 0;
 			margin: 0;
 		}
-
-		&.Card-Social {
-			padding-top: 0;
-
-			.Card-Icon {
-				outline: none;
-			}
-		}
 	}
 
 	.Card-Icon {
@@ -48,6 +40,10 @@ const { image, title, socialIcon } = Astro.props;
 		height: 9rem;
 		aspect-ratio: 1/1;
 		outline: var(--outline);
+
+		&.Card-Icon-Social {
+			outline: none;
+		}
 	}
 
 	.Card-Title {
