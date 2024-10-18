@@ -7,13 +7,23 @@ interface Props {
 	pagename: string;
 	desc: string;
 	tags: string;
-	icon: ImageMetadata;
-	iconAlt: string;
+	favicon: ImageMetadata;
+	embedImage?: ImageMetadata;
+	embedImageWidth?: number;
+	embedImageHeight?: number;
+	embedImageAlt?: string;
 	themeColor: string;
 }
 
-const { url, sitename, pagename, desc, tags, icon, iconAlt, themeColor } = Astro.props;
+const { url, sitename, pagename, desc, tags, favicon, embedImage, embedImageWidth, embedImageHeight, embedImageAlt, themeColor } = Astro.props;
+if (embedImage && !embedImageAlt) throw new Error("embedImage requires embedImageAlt");
+
 const pagetitle = `${sitename} | ${pagename}`;
+
+const ogImage = embedImage && new URL(embedImage.src, url);
+const ogImageWidth = embedImage && ( embedImageWidth?.toString() ?? embedImage.width.toString() );
+const ogImageHeight = embedImage && ( embedImageHeight?.toString() ?? embedImage.height.toString() );
+const ogImageAlt = embedImage && embedImageAlt;
 ---
 
 <meta charset="UTF-8" />
@@ -26,7 +36,7 @@ const pagetitle = `${sitename} | ${pagename}`;
 <title>{pagetitle}</title>
 <meta name="description" content={desc} />
 <meta name="keywords" content={tags} />
-<link rel="icon" href={icon.src} fetchpriority="low" referrerpolicy="no-referrer" />
+<link rel="icon" href={favicon.src} fetchpriority="low" referrerpolicy="no-referrer" />
 
 <link rel="canonical" href={url} />
 
@@ -38,12 +48,14 @@ const pagetitle = `${sitename} | ${pagename}`;
 <meta name="og:description" content={desc} />
 <meta name="og:url" content={url} />
 
-<meta name="og:image" content={new URL(icon.src, url)} />
-<meta name="og:image:alt" content={iconAlt} />
-<meta name="og:image:width" content={icon.width.toString()} />
-<meta name="og:image:height" content={icon.height.toString()} />
+{ ogImage && <Fragment>
+	<meta name="og:image" content={ogImage} />
+	<meta name="og:image:alt" content={ogImageAlt} />
+	<meta name="og:image:width" content={ogImageWidth} />
+	<meta name="og:image:height" content={ogImageHeight} />
+</Fragment> }
 
 <meta name="twitter:title" content={pagetitle} />
 <meta name="twitter:description" content={desc} />
-<meta name="twitter:image:src" content={new URL(icon.src, url)} />
+{ ogImage && <meta name="twitter:image:src" content={ogImage} /> }
 <meta name="twitter:card" content="summary_large_image" />
