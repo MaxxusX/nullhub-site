@@ -1,0 +1,135 @@
+@import "sanitize.css";
+@import "sanitize-forms.css";
+
+:root {
+		--fallback-bg-color: #0e0f13; /* #13151a; */
+		--ui-color: #0004;
+		--header-color: #0001;
+		--outline: 2px solid #f009;
+
+		color-scheme: dark;
+	}
+
+	html {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+		font-family: Oxygen, "Open Sans", "Noto Sans", "Helvetica Neue", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		/* line-height: 1.6; */
+		font-size: 19px;
+		color: #ddd;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+		background: fixed no-repeat center top/cover border-box var(--fallback-bg-color);
+	}
+
+	main {
+		overflow-x: hidden;
+		position: absolute;
+		margin: 0;
+		padding: 5svh 5svh;
+		padding-top: 3svh;
+		display: grid;
+		align-items: center;
+		align-content: space-around;
+		justify-content: center;
+		justify-items: stretch;
+		background-color: var(--ui-color);
+	}
+
+	h1,
+	h2 {
+		margin: 0;
+		margin-bottom: 0.2em;
+		line-height: 1;
+		text-align: center;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		color: #eee;
+	}
+	h2 {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #dedede;
+	}
+
+	code,
+	kbd,
+	samp,
+	pre {
+		font-family: Menlo, "DejaVu Sans Mono", "Roboto Mono", Monaco, "Lucida Console", "Liberation Mono", "Bitstream Vera Sans Mono", monospace, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	}
+
+	/*
+	since the <a> element is used for things like the social cards,
+	this stuff should be moved to a seperate class only for text hyperlinks.
+
+	a {
+		font-weight: 600;
+		color: #ddd;
+		text-decoration: underline solid #44f 2px;
+	}
+	*/
+
+	.icon {
+		height: inherit;
+		width: auto;
+		aspect-ratio: 1/1;
+	}
+
+	.pwrful {
+		font-weight: bold;
+		font-style: italic;
+		text-decoration: 5px #ff0000 solid underline;
+	}
+
+	@keyframes imprtntgrow {
+		from {
+			text-decoration-thickness: 2px;
+			text-decoration-color: #ff000088;
+		}
+		to {
+			text-decoration-thickness: 4px;
+			text-decoration-color: #ff0000bb;
+		}
+	}
+	@keyframes imprtntshrink {
+		from {
+			text-decoration-thickness: 4px;
+			text-decoration-color: #ff0000bb;
+		}
+		to {
+			text-decoration-thickness: 2px;
+			text-decoration-color: #ff000088;
+		}
+	}
+	.imprtnt {
+		font-weight: 600;
+		text-decoration: 1px #ff000077 solid underline;
+		animation: 75ms ease-in-out 0ms imprtntshrink both;
+	}
+	.imprtnt:hover {
+		animation: 75ms ease-in-out 0ms imprtntgrow both;
+	}
+
+	.lead {
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-weight: 500;
+		color: #e5e5e5;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.no-pad-y {
+		margin-top: 0;
+		padding-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+	}
