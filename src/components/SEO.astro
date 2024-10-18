@@ -20,7 +20,7 @@ if (embedImage && !embedImageAlt) throw new Error("embedImage requires embedImag
 
 const pagetitle = `${sitename} | ${pagename}`;
 
-const ogImage = embedImage && new URL(embedImage.src, url);
+const ogImage = embedImage && new URL(embedImage.src, url).href;
 const ogImageWidth = embedImage && ( embedImageWidth?.toString() ?? embedImage.width.toString() );
 const ogImageHeight = embedImage && ( embedImageHeight?.toString() ?? embedImage.height.toString() );
 const ogImageAlt = embedImage && embedImageAlt;
