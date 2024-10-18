@@ -9,20 +9,18 @@ interface Props {
 	tags: string;
 	favicon: ImageMetadata;
 	embedImage?: ImageMetadata;
-	embedImageWidth?: string;
-	embedImageHeight?: string;
 	embedImageAlt?: string;
 	themeColor: string;
 }
 
-const { url, sitename, pagename, desc, tags, favicon, embedImage, embedImageWidth, embedImageHeight, embedImageAlt, themeColor } = Astro.props;
+const { url, sitename, pagename, desc, tags, favicon, embedImage, embedImageAlt, themeColor } = Astro.props;
 if (embedImage && !embedImageAlt) throw new Error("embedImage requires embedImageAlt");
 
 const pagetitle = `${sitename} | ${pagename}`;
 
 const ogImage = embedImage && new URL(embedImage.src, url).href;
-const ogImageWidth = embedImage && ( embedImageWidth ?? embedImage.width.toString() );
-const ogImageHeight = embedImage && ( embedImageHeight ?? embedImage.height.toString() );
+const ogImageWidth = embedImage && embedImage.width.toString();
+const ogImageHeight = embedImage && embedImage.height.toString();
 const ogImageAlt = embedImage && embedImageAlt;
 ---
 
@@ -40,14 +38,15 @@ const ogImageAlt = embedImage && embedImageAlt;
 
 <link rel="canonical" href={url} />
 
+<!-- Apple Meta Tags -->
 <meta name="apple-mobile-web-app-title" content={sitename} />
 
+<!-- OpenGraph Meta Tags -->
 <meta name="og:type" content="website" />
 <meta name="og:site_name" content={sitename} />
 <meta name="og:title" content={pagetitle} />
 <meta name="og:description" content={desc} />
 <meta name="og:url" content={url} />
-
 { ogImage && <Fragment>
 	<meta name="og:image" content={ogImage} />
 	<meta name="og:image:alt" content={ogImageAlt} />
@@ -55,6 +54,7 @@ const ogImageAlt = embedImage && embedImageAlt;
 	<meta name="og:image:height" content={ogImageHeight} />
 </Fragment> }
 
+<!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={pagetitle} />
 <meta name="twitter:description" content={desc} />
