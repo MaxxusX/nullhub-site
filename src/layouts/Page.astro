@@ -7,7 +7,7 @@ const { title } = Astro.props;
 
 if (!Astro.site) throw new Error("pls define the site url in the config thx");
 
-import favicon from "../assets/favicon.webp";
+import logo from "../assets/logo.webp";
 import reception_blur from "../assets/reception_blur.webp";
 import SEO from "../components/SEO.astro";
 import "../styles/main.css";
@@ -22,7 +22,7 @@ import "../styles/main.css";
 			pagename={title}
 			desc="NullFire is a powerful Roblox script hub with countless features and a wide array of supported games."
 			tags="nullfire, roblox, hacks, scripts, exploits, script hub"
-			icon={favicon}
+			icon={logo}
 			iconAlt="NullFire Logo"
 			themeColor="#13151a"
 		/>
