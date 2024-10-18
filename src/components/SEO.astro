@@ -55,7 +55,10 @@ const ogImageAlt = embedImage && embedImageAlt;
 	<meta name="og:image:height" content={ogImageHeight} />
 </Fragment> }
 
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={pagetitle} />
 <meta name="twitter:description" content={desc} />
-{ ogImage && <meta name="twitter:image:src" content={ogImage} /> }
-<meta name="twitter:card" content="summary_large_image" />
+{ ogImage && <Fragment>
+	<meta name="twitter:image" content={ogImage} />
+	<meta name="twitter:image:alt" content={ogImageAlt} />
+</Fragment> }
