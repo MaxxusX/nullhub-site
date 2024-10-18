@@ -9,24 +9,24 @@ if (!Astro.site) throw new Error("pls define the site url in the config thx");
 
 import logo from "../assets/logo.png";
 import reception_blur from "../assets/reception_blur.webp";
-import SEO from "../components/SEO.astro";
+import Head from "../components/Head.astro";
 import "../styles/main.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<SEO
-			url={Astro.site}
-			sitename="NullFire"
-			pagename={title}
-			desc="NullFire is a powerful Roblox script hub with countless features and a wide array of supported games."
-			tags="nullfire, roblox, hacks, scripts, exploits, script hub"
-			favicon={logo}
-			embedImage={logo}
-			embedImageAlt="NullFire Logo"
-			themeColor="#13151a"
-		><Fragment>
+	<Head
+		url={Astro.site}
+		sitename="NullFire"
+		pagename={title}
+		desc="NullFire is a powerful Roblox script hub with countless features and a wide array of supported games."
+		tags="nullfire, roblox, hacks, scripts, exploits, script hub"
+		favicon={logo}
+		embedImage={logo}
+		embedImageAlt="NullFire Logo"
+		themeColor="#13151a"
+	>
+		<Fragment slot="preload">
 			<link
 				rel="preload"
 				href={reception_blur.src}
@@ -34,8 +34,8 @@ import "../styles/main.css";
 				fetchpriority="high"
 				referrerpolicy="no-referrer"
 			/>
-		</Fragment>/></SEO>
-	</head>
+		</Fragment>
+	</Head>
 	<body style={`background-image: url('${reception_blur.src}');`}>
 		<main>
 			<slot />
