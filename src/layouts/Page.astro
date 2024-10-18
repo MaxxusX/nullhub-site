@@ -26,15 +26,15 @@ import "../styles/main.css";
 			embedImage={logo}
 			embedImageAlt="NullFire Logo"
 			themeColor="#13151a"
-		/>
-
-		<link
-			rel="preload"
-			href={reception_blur.src}
-			as="image"
-			fetchpriority="high"
-			referrerpolicy="no-referrer"
-		/>
+		><Fragment>
+			<link
+				rel="preload"
+				href={reception_blur.src}
+				as="image"
+				fetchpriority="high"
+				referrerpolicy="no-referrer"
+			/>
+		</Fragment>/></SEO>
 	</head>
 	<body style={`background-image: url('${reception_blur.src}');`}>
 		<main>
