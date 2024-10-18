@@ -24,24 +24,30 @@ const ogImageHeight = embedImage && embedImage.height.toString();
 const ogImageAlt = embedImage && embedImageAlt;
 ---
 
-<meta charset="UTF-8" />
+<!-- Site Config -->
+<meta charset="utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content={themeColor ?? "#000"} />
-
 <meta name="referrer" content="no-referrer" />
-<meta name="robots" content="index,follow" />
 
+<!-- Preload -->
+<slot />
+
+<!-- Titlebar Data -->
 <title>{pagetitle}</title>
-<meta name="description" content={desc} />
-<meta name="keywords" content={tags} />
 <link rel="icon" href={favicon.src} fetchpriority="low" referrerpolicy="no-referrer" />
 
+<!-- Common Metadata -->
 <link rel="canonical" href={url} />
+<meta name="description" content={desc} />
+<meta name="keywords" content={tags} />
+<meta name="robots" content="index,follow" />
 
-<!-- Apple Meta Tags -->
+<!-- Apple Metadata -->
 <meta name="apple-mobile-web-app-title" content={sitename} />
 
-<!-- OpenGraph Meta Tags -->
+<!-- OpenGraph Metadata -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content={sitename} />
 <meta property="og:title" content={pagetitle} />
@@ -54,7 +60,7 @@ const ogImageAlt = embedImage && embedImageAlt;
 	<meta property="og:image:height" content={ogImageHeight} />
 </Fragment> }
 
-<!-- Twitter Meta Tags -->
+<!-- Twitter Metadata -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={pagetitle} />
 <meta name="twitter:description" content={desc} />
