@@ -34,7 +34,7 @@ export default defineConfig({
 			transformer: "lightningcss",
 			lightningcss: {
 				minify: isProd,
-				sourceMap: false,
+				sourceMap: isProd,
 				errorRecovery: false,
 				targets: {
 					and_chr: 128 << 16,
@@ -56,9 +56,9 @@ export default defineConfig({
 			target: ["es2020", "edge126", "firefox115", "chrome109", "safari15.6"],
 			assetsInlineLimit: 0,
 			cssCodeSplit: false,
-			cssMinify: isProd ? "lightningcss" : false,
+			cssMinify: "lightningcss",
 			minify: isProd ? "esbuild" : false,
-			sourcemap: false,
+			sourcemap: isProd,
 			reportCompressedSize: false,
 		},
 	},
