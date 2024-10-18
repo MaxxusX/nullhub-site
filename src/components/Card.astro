@@ -11,7 +11,7 @@ const { image, title } = Astro.props;
 ---
 
 <section class="Card">
-	<Image src={image} class="Card-Icon" crossorigin="anonymous" referrerpolicy="no-referrer" alt="" />
+	<Image src={image} class="Card-Icon" crossorigin="anonymous" referrerpolicy="no-referrer" aria-hidden="true" alt="" />
 	<h2 class="Card-Title">{title}</h2>
 	<slot />
 </section>
