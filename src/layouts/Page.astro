@@ -42,12 +42,6 @@ import SEO from "../components/SEO.astro";
 </html>
 
 <style is:global>
-	*,
-	::before,
-	::after {
-		box-sizing: border-box;
-	}
-
 	:root {
 		--fallback-bg-color: #0e0f13; /* #13151a; */
 		--ui-color: #0004;
@@ -62,13 +56,9 @@ import SEO from "../components/SEO.astro";
 		padding: 0;
 		overflow-x: hidden;
 		font-family: Oxygen, "Open Sans", "Noto Sans", "Helvetica Neue", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-		line-height: 1.15; /* 1.6; */
-		tab-size: 4;
+		/* line-height: 1.6; */
 		font-size: 19px;
 		color: #ddd;
-
-		/* Prevent adjustments of font size after orientation changes (iOS) */
-		-webkit-text-size-adjust: 100%;
 	}
 
 	body {
@@ -115,9 +105,6 @@ import SEO from "../components/SEO.astro";
 	samp,
 	pre {
 		font-family: Menlo, "DejaVu Sans Mono", "Roboto Mono", Monaco, "Lucida Console", "Liberation Mono", "Bitstream Vera Sans Mono", monospace, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-		/* Normalize font sizing */
-		font-size: 1em;
 	}
 
 	/*
@@ -130,141 +117,6 @@ import SEO from "../components/SEO.astro";
 		text-decoration: underline solid #44f 2px;
 	}
 	*/
-
-	/* ************************** */
-	/* Normalize bold font weight */
-
-	b,
-	strong {
-		font-weight: bolder;
-	}
-
-	/* ***************************************** */
-	/* Fix <sub> and <sup> affecting line height */
-
-	sub,
-	sup {
-		font-size: 75%;
-		line-height: 0;
-		position: relative;
-		vertical-align: baseline;
-	}
-
-	sub {
-		bottom: -0.25em;
-	}
-
-	sup {
-		top: -0.5em;
-	}
-
-	/* *************************************************** */
-	/* Fix table border color inheritance (Chrome, Safari) */
-
-	table {
-		border-color: currentcolor;
-	}
-
-	/* ******************************* */
-	/* Fix font styles                 */
-	/* Remove margin (Firefox, Safari) */
-	
-	button,
-	input,
-	optgroup,
-	select,
-	textarea {
-		font-family: inherit;
-		font-size: 100%;
-		line-height: 1.15;
-		margin: 0;
-	}
-
-	/* ************************************ */
-	/* Fix styling clickable types (Safari) */
-
-	button,
-	[type="button"],
-	[type="reset"],
-	[type="submit"],
-	::-webkit-file-upload-button {
-		-webkit-appearance: button;
-	}
-
-	/* ************** */
-	/* Remove padding */
-	
-	legend {
-		padding: 0;
-	}
-
-
-	/* **************************************** */
-	/* Fix vertical alignment (Chrome, Firefox) */
-	
-	progress {
-		vertical-align: baseline;
-	}
-
-	/* ************************************************************ */
-	/* Fix cursor style on increment and decrement buttons (Safari) */
-	
-	::-webkit-inner-spin-button,
-	::-webkit-outer-spin-button {
-		height: auto;
-	}
-
-	/* ******************************* */
-	/* Fix appearance (Chrome, Safari) */
-	/* Fix outline style (Safari)      */
-
-	[type="search"] {
-		-webkit-appearance: textfield;
-		outline-offset: -2px;
-	}
-
-	/* ************************************* */
-	/* Remove inner padding (Chrome, Safari) */
-	
-	::-webkit-search-decoration {
-		-webkit-appearance: none;
-	}
-
-	/* ****************** */
-	/* Fix fonts (Safari) */
-	
-	::-webkit-file-upload-button {
-		font: inherit;
-	}
-	
-	/* **************************** */
-	/* Fix display (Chrome, Safari) */
-	
-	summary {
-		display: list-item;
-	}
-
-	/* *************************************** */
-	/* Improve font rendering on HiDPI devices */
-
-	@media
-		screen and (-webkit-min-device-pixel-ratio: 2),
-		screen and (min-resolution: 2dppx) {
-		body {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-		}
-	}
-
-	/* ********************************************** */
-	/* Remove outline on active/hovered focused links */
-
-	a:active,
-	a:hover {
-		outline-width: 0;
-	}
-
-	/* ************************************************************ */
 
 	.icon {
 		height: inherit;
