@@ -5,14 +5,14 @@ import { Image } from "astro:assets";
 interface Props {
 	image: ImageMetadata;
 	title: string;
-	socialIcon?: boolean;
+	borderlessImg?: boolean;
 }
 
-const { image, title, socialIcon } = Astro.props;
+const { image, title, borderlessImg } = Astro.props;
 ---
 
 <section class="Card">
-	<Image src={image} class:list={[ "Card-Icon", { "Card-Icon-Social": socialIcon } ]} crossorigin="anonymous" referrerpolicy="no-referrer" aria-hidden="true" alt="" />
+	<Image src={image} class:list={[ "Card-Icon", { "Card-Icon-Borderless": borderlessImg } ]} crossorigin="anonymous" referrerpolicy="no-referrer" aria-hidden="true" alt="" />
 	<h2 class="Card-Title">{title}</h2>
 	<slot />
 </section>
@@ -41,7 +41,7 @@ const { image, title, socialIcon } = Astro.props;
 		aspect-ratio: 1/1;
 		outline: var(--outline);
 
-		&.Card-Icon-Social {
+		&.Card-Icon-Borderless {
 			outline: none;
 		}
 	}
