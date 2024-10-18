@@ -5,6 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 
+if (!Astro.site) throw new Error("pls define the site url in the config thx");
+
 import favicon from "../assets/favicon.webp";
 import reception_blur from "../assets/reception_blur.webp";
 import SEO from "../components/SEO.astro";
