@@ -1,5 +1,6 @@
 @import "sanitize.css";
 @import "sanitize-forms.css";
+@import "oxygen.css";
 
 :root {
 		--fallback-bg-color: #0e0f13; /* #13151a; */
@@ -14,7 +15,7 @@
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
-		font-family: Oxygen, "Open Sans", "Noto Sans", "Helvetica Neue", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		font-family: "Oxygen", "Open Sans", "Noto Sans", "Helvetica Neue", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 		/* line-height: 1.6; */
 		font-size: 19px;
 		color: #ddd;
