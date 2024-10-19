@@ -4,18 +4,9 @@ interface Props {
 };
 
 const { text = "" } = Astro.props;
-
-const escapeStr = (str: string) => {
-  return str
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;");
-};
 ---
 
-<pre><code>{ escapeStr(text) }</code></pre>
+<pre><code>{ text }</code></pre>
 
 <style>
   code,
