@@ -1,6 +1,7 @@
 @import "sanitize.css";
 @import "sanitize-forms.css";
 @import "oxygen.css";
+@import "code.css";
 
 :root {
 	--fallback-bg-color: #0e0f13; /* #13151a; */
