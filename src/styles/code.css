@@ -1,5 +1,6 @@
   code,
   pre {
+    display: block;
   	box-sizing: border-box;
   	margin: 0;
   	padding: 0;
@@ -20,9 +21,7 @@
     user-select: text;
   }
   
-  pre > code {
-  	display: block;
-  	
+  pre {
   	padding: 6px;
     padding-top: 8px;
     padding-left: 10px;
