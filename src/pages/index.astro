@@ -3,6 +3,7 @@ import DevCard from "../components/DevCard.astro";
 import SocialCard from "../components/SocialCard.astro";
 import List from "../components/List.astro";
 import Section from "../components/Section.astro";
+import Codeblock from "../components/Codeblock.astro";
 import Page from "../layouts/Page.astro";
 
 import img_catperson from "../assets/cat_person.webp";
@@ -23,7 +24,7 @@ import img_youtube from "../assets/youtube.svg";
 	</p>
 
 	<Section title="Script">
-		<pre><code>loadstring(game:HttpGet(&quot;https://raw.githubusercontent.com/NuIlFire/NullFire/main/loader.lua&quot;))()</code></pre>
+		<Codeblock>loadstring(game:HttpGet(&quot;https://raw.githubusercontent.com/NuIlFire/NullFire/main/loader.lua&quot;))()</Codeblock>
 	</Section>
 
 	<Section title="FAQ">
