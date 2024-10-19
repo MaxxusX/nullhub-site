@@ -8,6 +8,7 @@ export default defineConfig({
 	trailingSlash: "ignore",
 	output: "static",
 	compressHTML: isProd,
+	scopedStyleStrategy: "class",
 	build: {
 		format: "file",
 		inlineStylesheets: "never",
