@@ -39,7 +39,7 @@ jobs:
       - name: Install
         shell: "bash"
         working-directory: .
-        run: pnpm install
+        run: pnpm install --prod
 
       - name: Test
         shell: "bash"
@@ -49,7 +49,7 @@ jobs:
       - name: Build
         shell: "bash"
         working-directory: .
-        run: ASTRO_TELEMETRY_DISABLED=1 pnpm run build
+        run: ASTRO_TELEMETRY_DISABLED=1 NODE_ENV=production pnpm run build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
