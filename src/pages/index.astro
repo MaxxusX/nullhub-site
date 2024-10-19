@@ -13,6 +13,10 @@ import img_spidey from "../assets/spidey.webp";
 import img_discord from "../assets/discord.svg";
 import img_twitter from "../assets/twitter.svg";
 import img_youtube from "../assets/youtube.svg";
+
+const nullfire_script = `
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/main/loader.lua"))()
+`.trim();
 ---
 
 <Page title="About">
@@ -24,7 +28,7 @@ import img_youtube from "../assets/youtube.svg";
 	</p>
 
 	<Section title="Script">
-		<Codeblock>loadstring(game:HttpGet(&quot;https://raw.githubusercontent.com/NuIlFire/NullFire/main/loader.lua&quot;))()</Codeblock>
+		<Codeblock text={nullfire_script} />
 	</Section>
 
 	<Section title="FAQ">
