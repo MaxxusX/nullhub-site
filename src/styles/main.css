@@ -15,6 +15,7 @@
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
+		overscroll-behavior-x: none;
 		font-family: "Oxygen", "Open Sans", "Noto Sans", "Helvetica Neue", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 		/* line-height: 1.6; */
 		font-size: 19px;
@@ -25,15 +26,17 @@
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
+		overscroll-behavior-x: none;
 		background: fixed no-repeat center top/cover border-box var(--fallback-bg-color);
 	}
 
 	main {
-		overflow-x: hidden;
-		position: absolute;
 		margin: 0;
 		padding: 5svh 5svh;
 		padding-top: 3svh;
+		overflow-x: hidden;
+		overscroll-behavior-x: none;
+		position: absolute;
 		display: grid;
 		align-items: center;
 		align-content: space-around;
