@@ -1,0 +1,31 @@
+  code,
+  pre {
+  	box-sizing: border-box;
+  	margin: 0;
+  	padding: 0;
+  	width: 100%;
+  
+  	text-overflow: clip;
+  	white-space: pre;
+  	hyphens: none;
+  	overflow-wrap: normal;
+  
+  	font-family: Menlo, "DejaVu Sans Mono", "Roboto Mono", Monaco, "Lucida Console", "Liberation Mono",
+  		"Bitstream Vera Sans Mono", monospace, monospace, "Apple Color Emoji", "Segoe UI Emoji",
+  		"Segoe UI Symbol", "Noto Color Emoji";
+  	font-size: 16px;
+  	line-height: 24px;
+
+    -webkit-user-select: text;
+    user-select: text;
+  }
+  
+  pre > code {
+  	display: block;
+  	
+  	padding: 6px;
+    padding-top: 8px;
+    padding-left: 10px;
+  	
+  	border-radius: 4px;
+  }
