@@ -1,4 +1,5 @@
 import { defineConfig, passthroughImageService } from "astro/config";
+//import purgecss from "astro-purgecss";
 
 const isProd = import.meta.env.PROD;
 
@@ -7,6 +8,17 @@ export default defineConfig({
 	base: "/nullfire-site/",
 	trailingSlash: "ignore",
 	output: "static",
+	integrations: [
+		/*	
+ 		purgecss({
+			fontFace: true, // removes any unused @font-face if set to true
+			keyframes: true, // removes unused keyframes by setting if set to true
+			rejected: true, // scan through the removed list to see if there's anything wrong
+			rejectedCss: false, // keeps the discarded CSS
+			variables: false, // removes any unused CSS variables if set to true
+  	}),
+		*/
+	],
 	compressHTML: isProd,
 	scopedStyleStrategy: "class",
 	build: {
