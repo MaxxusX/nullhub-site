@@ -1,4 +1,6 @@
 ---
+import { Code } from "astro:components";
+
 import DevCard from "../components/DevCard.astro";
 import SocialCard from "../components/SocialCard.astro";
 import List from "../components/List.astro";
@@ -28,7 +30,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/mai
 	</p>
 
 	<Section title="Script">
-		<Codeblock text={nullfire_script} />
+		<Code code={nullfire_script} lang="luau" theme="aurora-x" />
 	</Section>
 
 	<Section title="FAQ">
