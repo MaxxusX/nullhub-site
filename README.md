@@ -23,6 +23,7 @@ if you want to make a change:
 8. if i think it's a good change, i'll merge it.
 
 if you'd like, you can also leave little messages in your code.<br>
+
 ```javascript
 /* oh hell nah who did this -maxxus */
 ```

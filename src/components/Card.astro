@@ -12,7 +12,14 @@ const { image, title, borderlessImg } = Astro.props;
 ---
 
 <section class="Card">
-	<Image src={image} class:list={[ "Card-Icon", { "Card-Icon-Borderless": borderlessImg } ]} crossorigin="anonymous" referrerpolicy="no-referrer" aria-hidden="true" alt="" />
+	<Image
+		src={image}
+		class:list={["Card-Icon", { "Card-Icon-Borderless": borderlessImg }]}
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+		aria-hidden="true"
+		alt=""
+	/>
 	<h2 class="Card-Title">{title}</h2>
 	<slot />
 </section>

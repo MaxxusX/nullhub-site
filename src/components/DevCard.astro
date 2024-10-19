@@ -11,17 +11,17 @@ import Card from "./Card.astro";
 ---
 
 <Card image={image} title={name}>
-        <p class="DevCard-Role">- {role} -</p>
+	<p class="DevCard-Role">- {role} -</p>
 	<div class="DevCard-Desc">
 		<slot />
 	</div>
 </Card>
 
 <style>
-        .DevCard-Role {
-	        font-style: italic;
+	.DevCard-Role {
+		font-style: italic;
 		color: #bbb;
-        }
+	}
 
 	.DevCard-Desc {
 		margin-top: 0.6rem;
