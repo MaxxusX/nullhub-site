@@ -31,7 +31,7 @@ const { image, title, borderlessImg } = Astro.props;
 		width: 9rem;
 		display: inline-block;
 		background-color: var(--ui-color);
-		outline: var(--outline);
+		border: var(--border);
 		text-align: center;
 		box-sizing: content-box;
 
@@ -46,10 +46,10 @@ const { image, title, borderlessImg } = Astro.props;
 		width: 9rem;
 		height: 9rem;
 		aspect-ratio: 1/1;
-		outline: var(--outline);
+		border: var(--border);
 
 		&.Card-Icon-Borderless {
-			outline: none;
+			border: hidden;
 		}
 	}
 
