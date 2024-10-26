@@ -4,14 +4,14 @@ import logo from "../assets/logo.png";
 
 interface Props {
 	path: string;
-	pagename: string;
-}
+	title: string;
+}js
 
-const { path, pagename } = Astro.props;
+const { path, title as pageName } = Astro.props;
 
 const url = new URL(path, Astro.site).href;
 const siteName = "NullFire";
-const title = `${siteName} | ${pagename}`;
+const title = `${siteName} | ${pageName}`;
 const desc = "NullFire is a powerful Roblox script hub with countless features and a wide array of supported games.";
 const tags = "nullfire, roblox, hacks, scripts, exploits, script hub";
 
