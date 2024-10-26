@@ -1,5 +1,4 @@
 ---
-import type { ImageMetadata } from "astro";
 import logo from "../assets/logo.png";
 
 interface Props {
@@ -17,8 +16,8 @@ const tags = "nullfire, roblox, hacks, scripts, exploits, script hub";
 
 const icon = new URL(logo.src, url).href;
 const iconAlt = "NullFire Logo";
-const iconWidth = icon.width.toString();
-const iconHeight = icon.height.toString();
+const iconWidth = logo.width.toString();
+const iconHeight = logo.height.toString();
 
 const themeColor = "#0e0f13";
 ---
