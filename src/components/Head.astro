@@ -50,14 +50,8 @@ const themeColor = "#0e0f13";
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={desc} />
-	{
-		ogImage && (
-			<Fragment>
-				<meta name="twitter:image" content={icon} />
-				<meta name="twitter:image:alt" content={iconAlt} />
-			</Fragment>
-		)
-	}
+	<meta name="twitter:image" content={icon} />
+	<meta name="twitter:image:alt" content={iconAlt} />
 
 	<!-- OpenGraph Metadata -->
 	<meta property="og:url" content={url} />
