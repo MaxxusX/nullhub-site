@@ -3,12 +3,13 @@ import type { ImageMetadata } from "astro";
 import logo from "../assets/logo.png";
 
 interface Props {
-	url: URL;
+	path: string;
 	pagename: string;
 }
 
-const { url, pagename } = Astro.props;
+const { path, pagename } = Astro.props;
 
+const url = new URL(path, Astro.site).href;
 const siteName = "NullFire";
 const title = `${siteName} | ${pagename}`;
 const desc = "NullFire is a powerful Roblox script hub with countless features and a wide array of supported games.";
