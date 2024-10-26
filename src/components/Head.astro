@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 interface Props {
 	path: string;
 	title: string;
-}js
+}
 
 const { path, title: pageName } = Astro.props;
 
@@ -45,6 +45,7 @@ const themeColor = "#0e0f13";
 
 	<!-- Apple Metadata -->
 	<meta name="apple-mobile-web-app-title" content={siteName} />
+	<link rel="apple-touch-icon" href={icon}>
 
 	<!-- Twitter Metadata -->
 	<meta name="twitter:card" content="summary" />
