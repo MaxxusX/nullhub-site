@@ -5,7 +5,6 @@ made w/ astro
 ## todo
 
 - [ ] add social links
-- [ ] add secrets
 
 ## how to edit this site
 
