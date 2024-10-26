@@ -1,17 +1,15 @@
 ---
 interface Props {
+	path: string;
 	title: string;
 }
 
-const { title } = Astro.props;
-
-if (!Astro.site) throw new Error("pls define the site url in the config thx");
+const { path, title } = Astro.props;
 
 // components
 import Head from "../components/Head.astro";
 
 // images
-import logo from "../assets/logo.png";
 import bgImage from "../assets/reception_blur.webp";
 
 // stylesheets
@@ -20,17 +18,7 @@ import "../styles/main.css";
 
 <!doctype html>
 <html lang="en">
-	<Head
-		url={Astro.site}
-		sitename="NullFire"
-		pagename={title}
-		desc="NullFire is a powerful Roblox script hub with countless features and a wide array of supported games."
-		tags="nullfire, roblox, hacks, scripts, exploits, script hub"
-		favicon={logo}
-		embedImage={logo}
-		embedImageAlt="NullFire Logo"
-		themeColor="#0e0f13"
-	>
+	<Head path={path} pagename={title}>
 		<Fragment slot="preload">
 			<link
 				rel="preload"
