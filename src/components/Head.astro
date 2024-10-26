@@ -7,7 +7,7 @@ interface Props {
 	title: string;
 }js
 
-const { path, title as pageName } = Astro.props;
+const { path, title: pageName } = Astro.props;
 
 const url = new URL(path, Astro.site).href;
 const siteName = "NullFire";
