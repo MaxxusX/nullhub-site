@@ -7,7 +7,7 @@
 	--fallback-bg-color: #0e0f13; /* #13151a; */
 	--ui-color: #0004;
 	--header-color: #0001;
-	--outline: 2px solid #f009;
+	--border: 2px solid #f009;
 
 	color-scheme: dark;
 }
