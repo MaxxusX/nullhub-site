@@ -28,5 +28,6 @@
     padding-left: 10px;
 
     border: var(--border);
+    border-width: 1px;
   	border-radius: 4px;
   }
