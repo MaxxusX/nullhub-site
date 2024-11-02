@@ -11,13 +11,11 @@ on:
       - "pnpm-lock.yaml"
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
+    permissions:
+      contents: read
+  
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -58,6 +56,11 @@ jobs:
 
   deploy:
     needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+  
     runs-on: ubuntu-latest
     environment:
       name: github-pages
