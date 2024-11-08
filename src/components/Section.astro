@@ -36,9 +36,13 @@ const { title } = Astro.props;
 
 	.Section-Content {
 		font-size: 1.3rem;
-		margin-top: 0.5rem;
+		margin-top: 1rem;
 		padding-top: 0;
 		margin-bottom: 0;
 		padding-bottom: 0;
+
+		&:has(> p:first-child) {
+			margin-top: 0.3rem;
+		}
 	}
 </style>
