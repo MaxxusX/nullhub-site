@@ -115,7 +115,7 @@ h3 {
 .imprtnt {
 	font-weight: 800;
 	text-decoration: 2px #ff0000 solid underline;
-	animation: 75ms ease-in-out 0ms imprtntshrink both;
+	/* animation: 75ms ease-in-out 0ms imprtntshrink both; */
 }
 .imprtnt:hover {
 	animation: 75ms ease-in-out 0ms imprtntgrow both;
