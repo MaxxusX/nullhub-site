@@ -98,27 +98,23 @@ h3 {
 
 @keyframes imprtntgrow {
 	from {
-		text-decoration-thickness: 2px;
-		text-decoration-color: #ff000088;
+		text-decoration-thickness: 2px
 	}
 	to {
 		text-decoration-thickness: 4px;
-		text-decoration-color: #ff0000bb;
 	}
 }
 @keyframes imprtntshrink {
 	from {
 		text-decoration-thickness: 4px;
-		text-decoration-color: #ff0000bb;
 	}
 	to {
 		text-decoration-thickness: 2px;
-		text-decoration-color: #ff000088;
 	}
 }
 .imprtnt {
-	font-weight: 700;
-	text-decoration: 2px #ff000077 solid underline;
+	font-weight: 800;
+	text-decoration: 2px #ff0000 solid underline;
 	animation: 75ms ease-in-out 0ms imprtntshrink both;
 }
 .imprtnt:hover {
