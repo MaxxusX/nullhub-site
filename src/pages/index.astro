@@ -1,11 +1,12 @@
 ---
 import { Code } from "astro:components";
 
-import DevCard from "../components/DevCard2.astro";
-import SocialCard from "../components/SocialCard.astro";
-import List from "../components/List.astro";
-import Section from "../components/Section.astro";
 import Page from "../layouts/Page.astro";
+import Section from "../components/Section.astro";
+import DevList from "../components/DevList.astro";
+import DevCard from "../components/DevCard2.astro";
+import List from "../components/List.astro";
+import SocialCard from "../components/SocialCard.astro";
 
 import img_catperson from "../assets/cat_person.webp";
 import img_maxxus from "../assets/maxxus.webp";
@@ -41,7 +42,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/mai
 	</Section>
 
 	<Section title="Our Developers">
-		<List>
+		<DevList>
 			<DevCard image={img_rob} name="rob" role="owner">
 				main dev.<br>
 				does pretty much all the work.
@@ -59,7 +60,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/mai
 			<DevCard image={img_catperson} name="cat_person" role="contributer">
 				contributed scripts for doors and pressure.
 			</DevCard>
-		</List>
+		</DevList>
 	</Section>
 
 	<Section title="Our Socials">
