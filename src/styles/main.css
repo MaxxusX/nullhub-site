@@ -39,11 +39,11 @@ main {
 	overflow-x: hidden;
 	overscroll-behavior-x: none;
 	position: absolute;
-	display: grid;
+	display: flex;
 	align-items: center;
 	align-content: space-around;
 	justify-content: center;
-	justify-items: stretch;
+	justify-items: center;
 	background-color: var(--ui-color);
 }
 
