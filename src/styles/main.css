@@ -34,8 +34,8 @@ body {
 
 main {
 	margin: 0;
-	padding: 3.8svw 3.8svw;
-	padding-top: 2.3svw;
+	padding: 0.5rem;
+	padding-top: 2rem;
 	overflow-x: hidden;
 	overscroll-behavior-x: none;
 	position: absolute;
