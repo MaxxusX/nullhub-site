@@ -1,0 +1,84 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+	image: ImageMetadata;
+  name: string;
+	role: string;
+}
+
+const { image, name, role } = Astro.props;
+---
+
+<section class="DevCard">
+	<Image
+		src={image}
+		class="DevCard-Image"
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+		aria-hidden="true"
+		alt=""
+	/>
+	<h3 class="DevCard-Name">{name}</h3>
+	<p class="DevCard-Role">- {role} -</p>
+	<div class="DevCard-Desc">
+		<slot />
+	</div>
+</section>
+
+<style>
+	.DevCard {
+		font-size: 1rem;
+		padding: 1rem;
+		margin: 0;
+		width: 9rem;
+		display: inline-block;
+		background-color: var(--ui-color);
+		border: var(--border);
+		text-align: center;
+		box-sizing: content-box;
+	}
+
+	.DevCard-Image {
+		display: block;
+		width: 9rem;
+		height: 9rem;
+		aspect-ratio: 1/1;
+		border: var(--border);
+    padding: 0;
+		margin: 0;
+	}
+
+	.DevCard-Name {
+    padding: 0;
+		margin: 0;
+		margin-top: 0.5rem;
+	}
+
+	.DevCard-Role {
+    padding: 0;
+		margin: 0;
+		font-style: italic;
+		color: #bbb;
+	}
+
+	.DevCard-Desc {
+    padding: 0;
+		margin: 0;
+		margin-top: 0.6rem;
+		text-align: center;
+		line-height: 1.25;
+		color: #ccc;
+
+		&> :global(*) {
+			padding: 0;
+			margin: 0;
+      margin-top: 0.45rem;
+
+			&:global(:first-child) {
+				margin-top: 0;
+			}
+		}
+	}
+</style>
