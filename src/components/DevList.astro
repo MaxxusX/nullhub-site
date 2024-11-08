@@ -9,9 +9,18 @@ interface Props {}
 <style>
 	.DevList {
 		display: grid;
-		grid-template-columns: repeat(1, minmax(0px, 1fr));
 		justify-items: center;
 		gap: 1rem;
+
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+
+		@media (min-width: 850px) {
+		  grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@media (min-width: 1280px) {
+		  grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
 
 		/*
 		margin-top: 0;
