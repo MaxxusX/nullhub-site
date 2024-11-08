@@ -53,24 +53,19 @@ body {
 	background: fixed no-repeat center top/cover border-box var(--fallback-bg-color);
 }
 
-#expander {
+main {
 	position: fixed;
-	z-index: 9999;
 	top: 16px;
 	left: 16px;
 	right: 16px;
 	bottom: 16px;
-	pointer-events: none;
-}
-
-main {
+	
 	width: 100%;
 	margin: 0;
 	padding: 0.5rem;
 	padding-top: 2rem;
 	overflow-x: hidden;
 	overscroll-behavior-x: none;
-	position: relative;
 	display: block;
 	background-color: var(--ui-color);
 }
