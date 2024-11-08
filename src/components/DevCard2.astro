@@ -6,9 +6,10 @@ interface Props {
 	image: ImageMetadata;
 	name: string;
 	role: string;
+	rolecolor: string;
 }
 
-const { image, name, role } = Astro.props;
+const { image, name, role, rolecolor } = Astro.props;
 ---
 
 <div class="DevCard">
@@ -24,10 +25,11 @@ const { image, name, role } = Astro.props;
 		<div class="DevCard-About">
 			<div class="DevCard-Name-Container">
 				<h3 class="DevCard-Name">{name}</h3>
+				<span class="DevCard-Role" style={`background-color: ${rolecolor};`}>{role}</span>
 				<!-- <a class="DevCard-Link"><svg></svg></a> -->
 			</div>
 			<p class="DevCard-Desc">
-				({role}) <slot />
+				<slot />
 			</p>
 		</div>
 	</div>
@@ -69,6 +71,10 @@ const { image, name, role } = Astro.props;
 		border-color: rgb(39, 39, 42);
 		border-width: 2px;
 		border-style: solid;
+
+		@media (min-width: 440px) {
+			width: 6rem;
+		}
 	}
 
 	.DevCard-About {
@@ -89,9 +95,34 @@ const { image, name, role } = Astro.props;
 		display: flex;
 		align-items: center;
 		text-align: center;
-		font-size: 1.25rem;
 		font-weight: 700;
+		font-size: 1.25rem;
 		line-height: 1.75rem;
+
+		@media (min-width: 440px) {
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+	}
+
+	.DevCard-Role {
+		width: fit-content;
+		padding-top: 0.125rem;
+		padding-bottom: 0.125rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		margin-left: 0.5rem;
+		align-items: flex-start;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		font-size: 0.75rem;
+		line-height: 1rem;
+		color: rgb(225, 239, 254);
+		
+		@media (min-width: 440px) {
+			font-size: 0.875rem;
+			line-height: 1.25rem;
+		}
 	}
 
 	.DevCard-Link {
