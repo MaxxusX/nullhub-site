@@ -91,7 +91,7 @@ h3 {
 }
 
 .pwrful {
-	font-weight: 800;
+	font-weight: 700;
 	font-style: italic;
 	text-decoration: 5px #ff0000 solid underline;
 }
@@ -117,7 +117,7 @@ h3 {
 	}
 }
 .imprtnt {
-	font-weight: 800;
+	font-weight: 700;
 	text-decoration: 2px #ee0000dd solid underline;
 	animation: 75ms ease-in-out 0ms imprtntshrink both;
 }
@@ -128,7 +128,7 @@ h3 {
 .lead {
 	margin-top: 0;
 	margin-bottom: 0;
-	font-weight: 600;
+	font-weight: 500;
 	color: #e5e5e5;
 	font-size: 1.5rem;
 	text-align: center;
