@@ -11,23 +11,114 @@ interface Props {
 const { image, name, role } = Astro.props;
 ---
 
-<section class="DevCard">
-	<Image
-		src={image}
-		class="DevCard-Image"
-		crossorigin="anonymous"
-		referrerpolicy="no-referrer"
-		aria-hidden="true"
-		alt=""
-	/>
-	<h3 class="DevCard-Name">{name}</h3>
-	<p class="DevCard-Role">- {role} -</p>
-	<div class="DevCard-Desc">
-		<slot />
+<div class="DevCard">
+	<div class="DevCard-Inner">
+		<Image
+			src={image}
+			class="DevCard-Image"
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+			aria-hidden="true"
+			alt=""
+		/>
+		<div class="DevCard-About">
+			<div class="DevCard-Name-Container">
+				<h3 class="DevCard-Name">{name}</h3>
+				<!-- <a class="DevCard-Link"><svg></svg></a> -->
+			</div>
+			<p class="DevCard-Desc">
+				({role}) <slot />
+			</p>
+		</div>
 	</div>
-</section>
+</div>
 
 <style>
+	.DevCard {
+		display: flex;
+		width: 100%;
+		height: fix-content;
+		align-items: center;
+		border-radius: 0.375rem;
+		border-color: rgb(39, 39, 42)
+		border-width: 2px;
+		border-style: solid;
+		background-color: rbg(16, 16, 19);
+		padding: 1rem;
+	}
+
+	.DevCard-Inner {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.DevCard-Image {
+		display: block;
+		vertical-align: middle;
+		height: 100%;
+		width: 4rem;
+		max-width: 100%;
+		border-radius: 0.375rem;
+		border-color: rgb(39, 39, 42)
+		border-width: 2px;
+		border-style: solid;
+	}
+
+	.DevCard-About {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.DevCard-Name-Container {
+		display: flex;
+		flex-direction: row;
+		gap: 0.5rem;
+	}
+
+	.DevCard-Name {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1.75rem;
+		color: rgb(225, 239, 254);
+	}
+
+	.DevCard-Link {
+		text-decoration: none;
+		display: flex;
+		border-radius: 9999px;
+		background-color: rgb(24, 24, 27);
+		padding: 0.625rem;
+
+		&> svg {
+			display: block;
+			vertical-align: middle;
+			margin-left: auto;
+			margin-right: auto;
+			height: 1rem;
+			width: 1rem;
+			fill: rgb(225, 239, 254);
+		}
+	}
+
+	.DevCard-Desc {
+		margin: 0;
+		text-align: center;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		font-weight: 500;
+		color: rgb(225, 239, 254);
+	}
+
+	/*
 	.DevCard {
 		font-size: 1rem;
 		padding: 1rem;
@@ -50,7 +141,7 @@ const { image, name, role } = Astro.props;
 		margin: 0;
 	}
 
-	.DevCard-Name {
+	.DevCard-Name-Container {
 		padding: 0;
 		margin: 0;
 		margin-top: 0.5rem;
@@ -81,4 +172,5 @@ const { image, name, role } = Astro.props;
 			}
 		}
 	}
+	*/
 </style>
