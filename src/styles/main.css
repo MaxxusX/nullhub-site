@@ -117,7 +117,7 @@ h3 {
 	}
 }
 .imprtnt {
-	font-weight: 600;
+	font-weight: 700;
 	text-decoration: 1px #ff000077 solid underline;
 	animation: 75ms ease-in-out 0ms imprtntshrink both;
 }
@@ -128,9 +128,9 @@ h3 {
 .lead {
 	margin-top: 0;
 	margin-bottom: 0;
-	font-weight: 500;
+	font-weight: 600;
 	color: #e5e5e5;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	text-align: center;
 }
 
