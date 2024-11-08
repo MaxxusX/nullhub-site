@@ -53,6 +53,16 @@ body {
 	background: fixed no-repeat center top/cover border-box var(--fallback-bg-color);
 }
 
+#expander {
+	position: fixed;
+	z-index: 9999;
+	top: 16px;
+	left: 16px;
+	right: 16px;
+	bottom: 16px;
+	pointer-events: none;
+}
+
 main {
 	width: 100%;
 	margin: 0;
