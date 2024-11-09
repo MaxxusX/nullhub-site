@@ -23,7 +23,9 @@ const { image, name, role, rolecolor } = Astro.props;
 	/>
 	<div class="DevCard-About">
 		<div class="DevCard-Name-Container">
-			<h3 class="DevCard-Name">{name}<span class="DevCard-Role" style={`background-color: ${rolecolor};`}>{role}</span></h3>
+			<h3 class="DevCard-Name">
+				{name}<span class="DevCard-Role" style={`background-color: ${rolecolor};`}>{role}</span>
+			</h3>
 			<!-- <a class="DevCard-Link"><svg></svg></a> -->
 		</div>
 		<p class="DevCard-Desc">
@@ -117,7 +119,7 @@ const { image, name, role, rolecolor } = Astro.props;
 		line-height: 1rem;
 		text-align: center;
 		color: rgb(225, 239, 254);
-		
+
 		@media (min-width: 440px) {
 			font-size: 0.875rem;
 			line-height: 1.25rem;
@@ -131,7 +133,7 @@ const { image, name, role, rolecolor } = Astro.props;
 		background-color: rgb(24, 24, 27);
 		padding: 0.625rem;
 
-		&> svg {
+		& > svg {
 			display: block;
 			vertical-align: middle;
 			margin-left: auto;

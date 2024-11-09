@@ -11,7 +11,8 @@ const { path, title: pageName } = Astro.props;
 const url = new URL(path, Astro.site).href;
 const siteName = "NullFire";
 const title = `${siteName} | ${pageName}`;
-const desc = "NullFire is a powerful Roblox script hub with countless features and a wide array of supported games.";
+const desc =
+	"NullFire is a powerful Roblox script hub with countless features and a wide array of supported games.";
 const tags = "nullfire, roblox, hacks, scripts, exploits, script hub";
 
 const icon = new URL(logo.src, url).href;
@@ -44,7 +45,7 @@ const themeColor = "#0e0f13";
 
 	<!-- Apple Metadata -->
 	<meta name="apple-mobile-web-app-title" content={siteName} />
-	<link rel="apple-touch-icon" href={icon}>
+	<link rel="apple-touch-icon" href={icon} />
 
 	<!-- Twitter Metadata -->
 	<meta name="twitter:card" content="summary" />

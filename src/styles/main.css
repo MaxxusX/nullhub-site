@@ -25,7 +25,8 @@ html {
 	overflow: visible;
 	overscroll-behavior: none;
 
-	font-family: Poppins, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-family: Poppins, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
 	font-feature-settings: normal;
 	font-variation-settings: normal;
 	color: #ddd;
@@ -73,7 +74,7 @@ main {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	
+
 	/*width: 100%;*/
 	margin: 0;
 	padding-top: 2rem;
@@ -138,7 +139,7 @@ h3 {
 
 @keyframes imprtntgrow {
 	from {
-		text-decoration-thickness: 2px
+		text-decoration-thickness: 2px;
 		text-decoration-color: #ee0000dd;
 	}
 	to {
