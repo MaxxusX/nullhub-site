@@ -14,11 +14,9 @@
 	},
 	"dependencies": {
 		"astro": "^4.16.10",
+		"@astrojs/check": "^0.9.4",
 		"lightningcss": "^1.28.1",
 		"typescript": "^5.6.3"
-	},
-	"optionalDependencies": {
-		"@astrojs/check": "^0.9.4"
 	},
 	"devDependencies": {
 		"prettier": "3.3.3",

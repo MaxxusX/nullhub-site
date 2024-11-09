@@ -46,7 +46,7 @@ jobs:
           cache-dependency-path: "./pnpm-lock.yaml"
 
       - name: Install
-        run: pnpm install --prod --no-optional
+        run: pnpm install --prod
 
       - name: Build
         run: pnpm run build
