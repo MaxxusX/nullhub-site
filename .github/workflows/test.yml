@@ -4,6 +4,7 @@ run-name: 'Test ${{ format(fromJSON(''{"push":"commit \"{0}\" by @{1} ({2})","pu
 on:
   push:
     paths:
+      - "**"
       - "!.github"
       - "!.vscode"
       - "!.gitignore"
@@ -13,6 +14,7 @@ on:
       - ".github/workflows/test.yml"
   pull_request:
     paths:
+      - "**"
       - "!.github"
       - "!.vscode"
       - "!.gitignore"
