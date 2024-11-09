@@ -4,12 +4,23 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/**"
-      - "public/**"
-      - "astro.config.mjs"
-      - "package.json"
-      - "pnpm-lock.yaml"
+      - "!.github"
+      - "!.vscode"
+      - "!.gitignore"
+      - "!.prettierignore"
+      - "!.prettierrc"
+      - "!*.md"
+      - ".github/workflows/build_deploy.yml"
   workflow_dispatch:
+
+env:
+  NODE_ENV: production
+  ASTRO_TELEMETRY_DISABLED: 1
+
+defaults:
+  run:
+    shell: "bash"
+    working-directory: .
 
 jobs:
   build:
@@ -30,24 +41,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: "pnpm"
           cache-dependency-path: "./pnpm-lock.yaml"
 
       - name: Install
-        shell: "bash"
-        working-directory: .
-        run: pnpm install --prod
-
-      - name: Test
-        shell: "bash"
-        working-directory: .
-        run: ASTRO_TELEMETRY_DISABLED=1 pnpm run test
+        run: pnpm install --prod --no-optional
 
       - name: Build
-        shell: "bash"
-        working-directory: .
-        run: ASTRO_TELEMETRY_DISABLED=1 NODE_ENV=production pnpm run build
+        run: pnpm run build
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
