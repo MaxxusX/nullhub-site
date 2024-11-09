@@ -1,9 +1,11 @@
-name: Build and Deploy to GitHub Pages
+name: "Build and Deploy to GitHub Pages"
 
 on:
   push:
-    branches: [main]
+    branches:
+      - "main"
     paths:
+      - "**"
       - "!.github"
       - "!.vscode"
       - "!.gitignore"
@@ -14,60 +16,60 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_ENV: production
+  NODE_ENV: "production"
   ASTRO_TELEMETRY_DISABLED: 1
 
 defaults:
   run:
     shell: "bash"
-    working-directory: .
+    working-directory: "."
 
 jobs:
   build:
     permissions:
-      contents: read
+      contents: "read"
 
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: "Checkout repository"
+        uses: "actions/checkout@v4"
 
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v4
+      - name: "Setup PNPM"
+        uses: "pnpm/action-setup@v4"
         with:
           version: "latest"
           package_json_file: "./package.json"
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: "Setup Node"
+        uses: "actions/setup-node@v4"
         with:
           node-version: 22
           cache: "pnpm"
           cache-dependency-path: "./pnpm-lock.yaml"
 
-      - name: Install
-        run: pnpm install --prod
+      - name: "Install"
+        run: "pnpm install --prod"
 
-      - name: Build
-        run: pnpm run build
+      - name: "Build"
+        run: "pnpm run build"
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: "Upload Pages Artifact"
+        uses: "actions/upload-pages-artifact@v3"
         with:
           path: "./dist/"
 
   deploy:
-    needs: build
+    needs: "build"
 
     permissions:
-      pages: write
-      id-token: write
+      pages: "write"
+      id-token: "write"
 
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: "github-pages"
+      url: "${{ steps.deployment.outputs.page_url }}"
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: "Deploy to GitHub Pages"
+        id: "deployment"
+        uses: "actions/deploy-pages@v4"
