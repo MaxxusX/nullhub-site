@@ -2,12 +2,36 @@ name: Test
 
 on:
   push:
-    branches-ignore: [main]
+    paths:
+      - "!.github"
+      - "!.vscode"
+      - "!.gitignore"
+      - "!.prettierignore"
+      - "!.prettierrc"
+      - "!*.md"
+      - ".github/workflows/test.yml"
   pull_request:
+    paths:
+      - "!.github"
+      - "!.vscode"
+      - "!.gitignore"
+      - "!.prettierignore"
+      - "!.prettierrc"
+      - "!*.md"
+      - ".github/workflows/test.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
+
+env:
+  NODE_ENV: production
+  ASTRO_TELEMETRY_DISABLED: 1
+
+defaults:
+  run:
+    shell: "bash"
+    working-directory: .
 
 jobs:
   test:
@@ -25,16 +49,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: "pnpm"
           cache-dependency-path: "./pnpm-lock.yaml"
 
       - name: Install
-        shell: "bash"
-        working-directory: .
         run: pnpm install --prod
 
       - name: Test
-        shell: "bash"
-        working-directory: .
-        run: ASTRO_TELEMETRY_DISABLED=1 pnpm run test
+        run: pnpm run test
