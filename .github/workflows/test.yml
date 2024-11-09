@@ -1,5 +1,5 @@
 name: Test
-run-name: Test ${{ fromJSON(format('{{"push":"commit {0} ({1}) by @{2}","pull_request":"PR #{3} ({4} by @{5})"}}', github.event.head_commit.id, github.event.after, (github.event.pusher.username || github.actor), github.event.number, github.event.pull_request.title, (github.event.pull_request.user.name || github.actor)))[github.event_name] || format('(ran by @{0})', github.triggering_actor) }}
+run-name: "Test ${{ fromJSON(format('{{''push'':''commit {0} ({1}) by @{2}'',''pull_request'':''PR #{3} ({4} by @{5})''}}', github.event.head_commit.id, github.event.after, (github.event.pusher.username || github.actor), github.event.number, github.event.pull_request.title, (github.event.pull_request.user.name || github.actor)))[github.event_name] || format('(ran by @{0})', github.triggering_actor) }}"
 
 on:
   push:
