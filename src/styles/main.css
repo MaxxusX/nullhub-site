@@ -19,11 +19,11 @@ html {
 	overflow-y: hidden;
 	overscroll-behavior-x: none;
 	overscroll-behavior-y: none;
-	font-family: Poppins, sans-serif;
+	font-family: Poppins, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-feature-settings: normal;
 	font-variation-settings: normal;
 	color: #ddd;
-	/* font-size: 18px; */
+	font-size: 18px;
 	/* font-family:
 		ui-sans-serif,
 		system-ui,
@@ -45,10 +45,20 @@ html {
 }
 
 body {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
 	margin: 0;
 	padding: 0;
+
 	overflow-x: hidden;
+	overflow-y: hidden;
 	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
+
 	background: fixed no-repeat center top/cover border-box var(--fallback-bg-color);
 }
 
@@ -64,7 +74,9 @@ main {
 	padding: 0.5rem;
 	padding-top: 2rem;
 	overflow-x: hidden;
-	overscroll-behavior-x: none;
+	overflow-y: auto;
+	overscroll-behavior-x: auto;
+	overscroll-behavior-y: auto;
 	display: block;
 	background-color: var(--ui-color);
 }
