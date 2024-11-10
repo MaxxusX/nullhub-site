@@ -1,7 +1,8 @@
 @import "../styles/sanitize.css";
 @import "../styles/sanitize-forms.css";
-@import "../styles/poppins.css";
 @import "../styles/code.css";
+@import "../styles/Hubot-Sans.css";
+@import "../styles/Mona-Sans.css";
 
 :root {
 	--color-foreground: rgba(30, 15, 15, 0.75); /* rgb(16, 16, 19) */
@@ -30,9 +31,11 @@ html {
 	overflow: visible;
 	overscroll-behavior: none;
 
-	font-family: Poppins, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+	font-family: "Mona Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
-	font-feature-settings: normal;
+	font-feature-settings: /* see https://github.com/github/mona-sans */
+		"ss02" on, /* wide uppercase I */
+		"ss03" on; /* lowercase L with tail */
 	font-variation-settings: normal;
 	color: var(--color-foreground-text);
 	font-size: 16px; /* 18px */
@@ -99,6 +102,11 @@ h3 {
 	margin-bottom: 0.2em;
 	line-height: 1;
 	text-align: center;
+
+	font-family: "Hubot Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	font-feature-settings: normal;
+	font-variation-settings: normal;
 }
 h1 {
 	font-size: 4rem;
