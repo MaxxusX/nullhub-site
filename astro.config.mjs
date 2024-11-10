@@ -1,7 +1,7 @@
 import { defineConfig, passthroughImageService } from "astro/config";
 //import purgecss from "astro-purgecss";
 
-const isProd = false; // import.meta.env.PROD;
+const isProd = import.meta.env.PROD;
 
 export default defineConfig({
 	site: "https://maxxusx.github.io/nullfire-site/",
@@ -69,7 +69,7 @@ export default defineConfig({
 			target: ["es2020", "edge126", "firefox115", "chrome109", "safari15.6"],
 			assetsInlineLimit: 0,
 			cssCodeSplit: false,
-			cssMinify: "lightningcss",
+			cssMinify: isProd ? "lightningcss" : false,
 			minify: isProd ? "esbuild" : false,
 			sourcemap: isProd,
 			reportCompressedSize: false,
