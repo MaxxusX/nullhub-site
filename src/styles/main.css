@@ -9,6 +9,7 @@
 	--color-foreground-border: rgb(120, 40, 40); /* rgb(39, 39, 42) */
 	--color-foreground-border-selected: rgb(180, 40, 40);
 	--color-foreground-ui: rgb(40, 25, 25);
+	--color-foreground-ui-selected: rgb(39, 39, 42);
 	--color-foreground-title: rgb(240, 240, 240);
 	--color-foreground-heading: rgb(230, 230, 230);
 	--color-foreground-text: rgb(222, 222, 222);
