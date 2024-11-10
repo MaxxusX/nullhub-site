@@ -4,12 +4,12 @@
 @import "../styles/code.css";
 
 :root {
-	--color-foreground: rgb(30, 15, 15); /* rgb(16, 16, 19) */
-	--color-foreground-selected: rgb(20, 15, 15);
-	--color-foreground-border: rgb(120, 40, 40); /* rgb(39, 39, 42) */
-	--color-foreground-border-selected: rgb(180, 40, 40);
-	--color-foreground-ui: rgb(40, 25, 25);
-	--color-foreground-ui-selected: rgb(39, 39, 42);
+	--color-foreground: rgba(30, 15, 15, 0.75); /* rgb(16, 16, 19) */
+	--color-foreground-selected: rgba(20, 15, 15, 0.75);
+	--color-foreground-border: rgba(120, 40, 40, 0.75); /* rgb(39, 39, 42) */
+	--color-foreground-border-selected: rgba(180, 40, 40, 0.75);
+	--color-foreground-ui: rgba(40, 25, 25, 0.75);
+	--color-foreground-ui-selected: rgba(39, 39, 42, 0.75);
 	--color-foreground-title: rgb(240, 240, 240);
 	--color-foreground-heading: rgb(230, 230, 230);
 	--color-foreground-text: rgb(222, 222, 222);
