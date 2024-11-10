@@ -1,7 +1,8 @@
+import { env } from "node:process";
 import { defineConfig, passthroughImageService } from "astro/config";
 //import purgecss from "astro-purgecss";
 
-const isProd = import.meta.env.PROD;
+const isProd = env.NODE_ENV !== "development";
 
 export default defineConfig({
 	site: "https://maxxusx.github.io/nullfire-site/",
@@ -43,6 +44,8 @@ export default defineConfig({
 		*/
 	},
 	vite: {
+		mode: isProd ? "production" : "development",
+		logLevel: "info",
 		css: {
 			transformer: "lightningcss",
 			lightningcss: {
