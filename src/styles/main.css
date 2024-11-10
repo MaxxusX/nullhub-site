@@ -5,7 +5,9 @@
 
 :root {
 	--color-foreground: rgb(30, 15, 15); /* rgb(16, 16, 19) */
+	--color-foreground-selected: rgb(20, 15, 15);
 	--color-foreground-border: rgb(120, 40, 40); /* rgb(39, 39, 42) */
+	--color-foreground-border-selected: rgb(180, 40, 40);
 	--color-foreground-ui: rgb(40, 25, 25);
 	--color-foreground-title: rgb(240, 240, 240);
 	--color-foreground-heading: rgb(230, 230, 230);
