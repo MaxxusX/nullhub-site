@@ -1,7 +1,7 @@
 import { defineConfig, passthroughImageService } from "astro/config";
 //import purgecss from "astro-purgecss";
 
-const isProd = import.meta.env.PROD;
+const isProd = false; // import.meta.env.PROD;
 
 export default defineConfig({
 	site: "https://maxxusx.github.io/nullfire-site/",
