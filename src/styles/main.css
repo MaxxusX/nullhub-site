@@ -9,6 +9,9 @@
 	--header-color: #0001;
 	--border: 2px solid #f009;
 
+	--color-foreground: rgb(30, 15, 15); /* rgb(16, 16, 19) */
+	--color-foreground-border: rgb(120, 40, 40); /* rgb(39, 39, 42) */
+
 	color-scheme: dark;
 }
 
