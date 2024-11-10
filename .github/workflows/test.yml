@@ -1,4 +1,4 @@
-name: Test
+name: "Test"
 run-name: 'Test ${{ format(fromJSON(''{"push":"commit \"{0}\" by @{1} ({2})","pull_request":"PR #{3} (\"{4}\" by @{5})"}'')[github.event_name], github.event.head_commit.message, (github.event.pusher.username || github.actor), github.event.head_commit.id, github.event.number, github.event.pull_request.title, (github.event.pull_request.user.name || github.actor)) || format(''(ran by @{0})'', github.triggering_actor) }}'
 
 on:
