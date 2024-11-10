@@ -4,15 +4,14 @@
 @import "../styles/code.css";
 
 :root {
-	--fallback-bg-color: #0e0f13; /* #13151a; */
-	--ui-color: #0004;
-	--header-color: #0001;
-	--border: 2px solid #f009;
-
 	--color-foreground: rgb(30, 15, 15); /* rgb(16, 16, 19) */
-	--color-foreground-ui: rgb(40, 25, 25);
-	--color-foreground-text: rgb(225, 240, 255);
 	--color-foreground-border: rgb(120, 40, 40); /* rgb(39, 39, 42) */
+	--color-foreground-ui: rgb(40, 25, 25);
+	--color-foreground-title: rgb(240, 240, 240);
+	--color-foreground-heading: rgb(230, 230, 230);
+	--color-foreground-text: rgb(222, 222, 222);
+
+	/* --border: 2px solid #f009; */
 
 	color-scheme: dark;
 }
@@ -34,7 +33,7 @@ html {
 		"Noto Color Emoji";
 	font-feature-settings: normal;
 	font-variation-settings: normal;
-	color: #ddd;
+	color: var(--color-foreground-text);
 	font-size: 16px; /* 18px */
 
 	/* font-family:
@@ -69,7 +68,7 @@ body {
 	overflow: visible;
 	overscroll-behavior: none;
 
-	background: fixed no-repeat center top/cover border-box var(--fallback-bg-color);
+	background: fixed no-repeat center top/cover border-box #0e0f13;
 }
 
 main {
@@ -89,7 +88,7 @@ main {
 	overscroll-behavior: auto;
 
 	display: block;
-	background-color: var(--ui-color);
+	background-color: #0004;
 }
 
 h1,
@@ -103,17 +102,17 @@ h3 {
 h1 {
 	font-size: 4rem;
 	font-weight: 800;
-	color: #eee;
+	color: var(--color-foreground-title);
 }
 h2 {
 	font-size: 2.5rem;
 	font-weight: 700;
-	color: #dedede;
+	color: var(--color-foreground-heading);
 }
 h3 {
 	font-size: 1.5rem;
 	font-weight: 600;
-	color: #dedede;
+	color: var(--color-foreground-heading);
 }
 
 /*
