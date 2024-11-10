@@ -33,6 +33,7 @@ html {
 
 	font-family: "Mona Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
+	font-stretch: normal;
 	font-feature-settings: /* see https://github.com/github/mona-sans */
 		"ss02" on, /* wide uppercase I */
 		"ss03" on; /* lowercase L with tail */
@@ -105,6 +106,7 @@ h3 {
 
 	font-family: "Hubot Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
+	font-stretch: normal;
 	font-feature-settings: normal;
 	font-variation-settings: normal;
 }
