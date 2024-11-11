@@ -7,8 +7,8 @@ on:
       - "main"
     paths:
       - "**"
-      - "!.github"
-      - "!.vscode"
+      - "!.github/**"
+      - "!.vscode/**"
       - "!.gitignore"
       - "!.prettierignore"
       - "!.prettierrc"
@@ -17,8 +17,8 @@ on:
   pull_request:
     paths:
       - "**"
-      - "!.github"
-      - "!.vscode"
+      - "!.github/**"
+      - "!.vscode/**"
       - "!.gitignore"
       - "!.prettierignore"
       - "!.prettierrc"
