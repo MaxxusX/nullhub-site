@@ -37,7 +37,11 @@ html {
 	font-feature-settings: /* see https://github.com/github/mona-sans */
 		"ss02" on, /* wide uppercase I */
 		"ss03" on; /* lowercase L with tail */
+	font-optical-sizing: auto;
 	font-stretch: normal;
+	font-style: normal;
+	font-weight: 400;
+	
 	color: var(--color-foreground-text);
 	font-size: 16px; /* 18px */
 
@@ -108,7 +112,9 @@ h3 {
 		"Noto Color Emoji";
 	font-variation-settings: normal;
 	font-feature-settings: normal;
+	font-optical-sizing: auto;
 	font-stretch: normal;
+	font-style: normal;
 }
 h1 {
 	font-size: 4rem;
