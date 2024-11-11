@@ -6,8 +6,8 @@ on:
       - "main"
     paths:
       - "**"
-      - "!.github"
-      - "!.vscode"
+      - "!.github/**"
+      - "!.vscode/**"
       - "!.gitignore"
       - "!.prettierignore"
       - "!.prettierrc"
@@ -17,6 +17,9 @@ on:
 
 env:
   NODE_ENV: "production"
+  MODE: "production"
+  PROD: true
+  DEV: false
   ASTRO_TELEMETRY_DISABLED: 1
 
 defaults:
@@ -51,7 +54,7 @@ jobs:
         run: "pnpm install --prod"
 
       - name: "Build"
-        run: "pnpm run build"
+        run: "pnpm run build --mode production"
 
       - name: "Upload Pages Artifact"
         uses: "actions/upload-pages-artifact@v3"
