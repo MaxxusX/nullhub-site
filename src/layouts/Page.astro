@@ -14,6 +14,7 @@ import bgImage from "../assets/reception_blur.webp";
 
 // stylesheets
 import "../styles/main.css";
+const styleURL = new URL("../styles/main.css", import.meta.url).href;
 ---
 
 <!doctype html>
@@ -25,6 +26,27 @@ import "../styles/main.css";
 				href={bgImage.src}
 				as="image"
 				fetchpriority="high"
+				referrerpolicy="no-referrer"
+			/>
+			<link
+				rel="preload"
+				href={styleURL}
+				as="style"
+				fetchpriority="high"
+				referrerpolicy="no-referrer"
+			/>
+			<link
+				rel="preload"
+				href="/fonts/Hubot-Sans.woff2"
+				as="font"
+				fetchpriority="low"
+				referrerpolicy="no-referrer"
+			/>
+			<link
+				rel="preload"
+				href="/fonts/Mona-Sans.woff2"
+				as="font"
+				fetchpriority="low"
 				referrerpolicy="no-referrer"
 			/>
 		</Fragment>
