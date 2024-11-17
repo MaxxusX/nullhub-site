@@ -37,8 +37,8 @@ html {
 		"Noto Color Emoji";
 	font-variation-settings: normal;
 	font-feature-settings: /* see https://github.com/github/mona-sans */
-		"ss02" on,
-		/* wide uppercase I */ "ss03" on; /* lowercase L with tail */
+		"ss02" on, /* wide uppercase I */
+		"ss03" on; /* lowercase L with tail */
 	font-optical-sizing: auto;
 	font-stretch: normal;
 	font-style: normal;
