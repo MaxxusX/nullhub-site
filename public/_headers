@@ -1,6 +1,8 @@
 /*
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET
+  Cache-Control: max-age=43200, stale-while-revalidate=43200, stale-if-error=86400
+  Content-Language: en-US
   Content-Security-Policy: default-src 'none'; script-src 'self'; script-src-elem 'self'; script-src-attr 'none'; style-src 'self' https: data: 'unsafe-inline'; style-src-elem 'self' https: data: 'unsafe-inline'; style-src-attr 'self' https: data: 'unsafe-inline'; worker-src 'self'; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; frame-src 'self' https:; child-src 'self' https:; connect-src 'self' https:; prefetch-src 'self' https:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https:; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
@@ -15,11 +17,11 @@
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
   X-XSS-Protection: 0
-  Cache-Control: max-age=43200, stale-while-revalidate=43200, stale-if-error=86400
-  Content-Language: en-US
 
 /fonts/*
   Cache-Control: max-age=31536000, stale-while-revalidate=31536000, stale-if-error=31536000, immutable
+  X-Robots-Tag: indexifembedded, noindex, nofollow, nosnippet
 
 /_astro/*
   Cache-Control: max-age=31536000, stale-while-revalidate=31536000, stale-if-error=31536000, immutable
+  X-Robots-Tag: indexifembedded, noindex, nofollow, nosnippet
