@@ -20,6 +20,8 @@
 
 html {
 	position: fixed;
+	box-sizing: content-box;
+
 	top: 0;
 	left: 0;
 	right: 0;
@@ -67,6 +69,7 @@ html {
 
 body {
 	position: static;
+	box-sizing: content-box;
 
 	width: 100%;
 	height: 100%;
@@ -82,6 +85,7 @@ body {
 
 main {
 	position: static;
+	box-sizing: content-box;
 
 	width: 100%;
 	height: 100%;
