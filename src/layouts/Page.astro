@@ -14,7 +14,6 @@ import bgImage from "../assets/reception_blur.webp";
 
 // stylesheets
 import "../styles/main.css";
-const styleURL = new URL("../styles/main.css", import.meta.url).href;
 ---
 
 <!doctype html>
@@ -25,13 +24,6 @@ const styleURL = new URL("../styles/main.css", import.meta.url).href;
 				rel="preload"
 				href={bgImage.src}
 				as="image"
-				fetchpriority="high"
-				referrerpolicy="no-referrer"
-			/>
-			<link
-				rel="preload"
-				href={styleURL}
-				as="style"
 				fetchpriority="high"
 				referrerpolicy="no-referrer"
 			/>
