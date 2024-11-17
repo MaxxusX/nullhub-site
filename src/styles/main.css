@@ -192,4 +192,12 @@ h3 {
 	overflow: hidden;
 	overscroll-behavior: none;
 	border-radius: 5px;
+
+	/*
+	   whoever decided to not allow transparency on iframes which have a different
+	   color-scheme than the embedder deserves a public execution.
+	
+	   - maxxus
+	*/
+	color-scheme: normal;
 }
