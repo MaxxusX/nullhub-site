@@ -183,3 +183,11 @@ h3 {
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
+
+#discordEmbed {
+	border: none;
+	outline: none;
+	background: none;
+	overflow: hidden;
+	border-radius: 5px;
+}
