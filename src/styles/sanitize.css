@@ -166,11 +166,19 @@
 }
 
 /**
- * Remove the border on iframes in all browsers (opinionated).
+ * Remove the border, outline, and background on iframes in all browsers (opinionated).
  */
 
 :where(iframe) {
 	border-style: none;
+	border-color: transparent;
+	border-width: 0;
+	
+	outline-style: none;
+	outline-color: transparent;
+	outline-width: 0;
+	
+	background: none;
 }
 
 /**
