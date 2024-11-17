@@ -5,15 +5,15 @@
 @import "../styles/Mona-Sans.css";
 
 :root {
-	--color-foreground: rgba(30, 15, 15, 0.75); /* rgb(16, 16, 19) */
-	--color-foreground-selected: rgba(20, 15, 15, 0.75);
-	--color-foreground-border: rgba(120, 40, 40, 0.75); /* rgb(39, 39, 42) */
-	--color-foreground-border-selected: rgba(180, 40, 40, 0.75);
-	--color-foreground-ui: rgba(40, 25, 25, 0.75);
-	--color-foreground-ui-selected: rgba(39, 39, 42, 0.75);
-	--color-foreground-title: rgb(240, 240, 240);
-	--color-foreground-heading: rgb(230, 230, 230);
-	--color-foreground-text: rgb(222, 222, 222);
+	--color-foreground: rgb(30 15 15 / 0.75);
+	--color-foreground-selected: rgb(20 15 15 / 0.75);
+	--color-foreground-border: rgb(120 40 40 / 0.75);
+	--color-foreground-border-selected: rgb(180 40 40 / 0.75);
+	--color-foreground-ui: rgb(40 25 25 / 0.75);
+	--color-foreground-ui-selected: rgb(39 39 42 / 0.75);
+	--color-foreground-title: rgb(240 240 240);
+	--color-foreground-heading: rgb(230 230 230);
+	--color-foreground-text: rgb(222 222 222);
 
 	color-scheme: dark;
 }
@@ -80,7 +80,7 @@ body {
 	overflow: visible;
 	overscroll-behavior: none;
 
-	background: fixed no-repeat center top/cover border-box #0e0f13;
+	background: fixed no-repeat center top/cover border-box rgb(14 15 19);
 }
 
 main {
@@ -101,7 +101,7 @@ main {
 	overscroll-behavior: auto;
 
 	display: block;
-	background-color: #0004;
+	background-color: rgb(0 0 0 / 0.25);
 }
 
 h1,
@@ -156,19 +156,19 @@ h3 {
 .pwrful {
 	font-weight: 800;
 	font-style: italic;
-	text-decoration: 5px #ff0000 solid underline;
+	text-decoration: 5px rgb(255 0 0) solid underline;
 }
 
 .imprtnt {
 	font-weight: 700;
-	text-decoration: 2px #ee0000dd solid underline;
+	text-decoration: 2px rgb(240 0 0) solid underline;
 	transition:
 		text-decoration-thickness 75ms ease-in-out,
 		text-decoration-color 75ms ease-in-out;
 
 	&:hover {
 		text-decoration-thickness: 4px;
-		text-decoration-color: #ee0000ed;
+		text-decoration-color: rgb(245 0 0);
 	}
 }
 
@@ -176,7 +176,7 @@ h3 {
 	margin-top: 0;
 	margin-bottom: 0;
 	font-weight: 500;
-	color: #e5e5e5;
+	color: rgb(230 230 230);
 	font-size: 1.5rem;
 	text-align: center;
 }
@@ -189,9 +189,15 @@ h3 {
 }
 
 #discordEmbed {
+	margin: 0;
+	padding: 0;
+	
 	border: none;
 	outline: none;
+	
 	background: none;
+	
 	overflow: hidden;
+	overscroll-behavior: none;
 	border-radius: 5px;
 }
