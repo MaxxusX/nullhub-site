@@ -17,7 +17,7 @@ Allow: /_astro/*.jpg$
 Allow: /_astro/*.jpeg$
 Allow: /_astro/*.webp$
 Allow: /_astro/*.ico$
-Disallow: /cdn-cgi/*
+Disallow: /cdn-cgi/
 Crawl-delay: 10
 
 # favicon bots
