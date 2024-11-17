@@ -6,21 +6,29 @@ User-agent: Googlebot
 User-agent: msnbot
 User-agent: Slurp
 User-agent: YandexBot
+User-agent: Baiduspider
 Disallow: /
 Allow: /$
 Allow: /*/$
 Allow: /*.html$
-Allow: /*.png$
-Allow: /*.svg$
-Allow: /*.webp$
+Allow: /_astro/*.svg$
+Allow: /_astro/*.png$
+Allow: /_astro/*.jpg$
+Allow: /_astro/*.jpeg$
+Allow: /_astro/*.webp$
+Allow: /_astro/*.ico$
+Disallow: /cdn-cgi/*
 Crawl-delay: 10
 
 # favicon bots
 User-agent: DuckDuckGo-Favicons-Bot
 Disallow: /
-Allow: /*.png$
-Allow: /*.svg$
-Allow: /*.webp$
+Allow: /_astro/*.svg$
+Allow: /_astro/*.png$
+Allow: /_astro/*.jpg$
+Allow: /_astro/*.jpeg$
+Allow: /_astro/*.webp$
+Allow: /_astro/*.ico$
 Crawl-delay: 120
 
 # Internet Archive
@@ -34,8 +42,6 @@ User-agent: adidxbot
 User-agent: AdsBot-Google
 User-agent: AdsBot-Google-Mobile
 User-agent: APIs-Google
-User-agent: Baiduspider # aint no one from china gonna be visiting
-User-agent: Baiduspider-video
 User-agent: CCBot
 User-agent: DOC
 User-agent: FeedFetcher-Google
