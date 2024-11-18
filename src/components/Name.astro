@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from "astro/types";
 
 interface Props {
-	HTMLAttributes<"span">;
+	[Property in keyof HTMLAttributes<"span">]: HTMLAttributes<"span">[Property];
 }
 
 const props = Astro.props;
