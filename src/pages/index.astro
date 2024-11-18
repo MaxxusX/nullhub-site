@@ -6,17 +6,12 @@ import Part from "../components/Part.astro";
 import Section from "../components/Section.astro";
 import DevList from "../components/DevList.astro";
 import DevCard from "../components/DevCard.astro";
-import List from "../components/List.astro";
-import SocialCard from "../components/SocialCard.astro";
 
 import img_catperson from "../assets/cat_person.webp";
 import img_maxxus from "../assets/maxxus.webp";
 import img_rob from "../assets/rob_2.png";
 import img_spidey from "../assets/spidey.webp";
 import img_infernus from "../assets/infernus.png";
-import img_discord from "../assets/discord.svg";
-import img_twitter from "../assets/twitter.svg";
-import img_youtube from "../assets/youtube.svg";
 
 const nullfire_script = `
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/main/loader.lua"))()
@@ -65,31 +60,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/mai
 			</DevCard>
 		</DevList>
 	</Section>
-
-	<!--
-	<Section title="Socials">
-		<List>
-			<SocialCard
-				image={img_discord}
-				platform="discord"
-				username="dsc.gg/nullfire"
-				link="https://dsc.gg/nullfire"
-			/>
-			<SocialCard
-				image={img_twitter}
-				platform="twitter"
-				username="@ [placeholder]"
-				link="https://x.com/"
-			/>
-			<SocialCard
-				image={img_youtube}
-				platform="youtube"
-				username="@ [placeholder]"
-				link="https://youtube.com/"
-			/>
-		</List>
-	</Section>
-	-->
 
 	<Section title="Join our Discord!">
 		<iframe
