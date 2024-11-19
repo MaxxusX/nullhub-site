@@ -6,6 +6,7 @@ import Part from "../components/Part.astro";
 import Section from "../components/Section.astro";
 import DevList from "../components/DevList.astro";
 import DevCard from "../components/DevCard.astro";
+import IFrame from "../components/IFrame.astro";
 
 import img_catperson from "../assets/cat_person.webp";
 import img_maxxus from "../assets/maxxus.webp";
@@ -60,7 +61,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/mai
 	</Section>
 
 	<Section title="Join our Discord!">
-		<iframe
+		<IFrame
 			id="discordEmbed"
 			src="https://discord.com/widget?id=1289878746463207424&theme=dark"
 			width="350"
@@ -70,6 +71,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NuIlFire/NullFire/mai
 			credentialless="true"
 			referrerpolicy="no-referrer"
 			sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-		></iframe>
+		></IFrame>
 	</Section>
 </Page>
