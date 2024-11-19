@@ -133,6 +133,10 @@ h3 {
 	color: var(--color-foreground-heading);
 }
 
+abbr {
+	text-decoration: none;
+}
+
 /*
 	since the <a> element is used for things like the social cards,
 	this stuff should be moved to a seperate class only for text hyperlinks.
