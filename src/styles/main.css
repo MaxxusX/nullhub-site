@@ -1,7 +1,6 @@
 @import "../styles/sanitize.css";
 @import "../styles/sanitize-forms.css";
 @import "../styles/JetBrains-Mono.css";
-@import "../styles/code.css";
 
 :root {
 	--color-foreground: rgb(30 15 15 / 0.75);
@@ -113,6 +112,53 @@ h3 {
 
 abbr {
 	text-decoration: none;
+}
+
+pre {
+	padding-top: 8px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	border-style: solid;
+	border-color: #f009;
+	border-width: 2px;
+	border-radius: 0.375rem;
+
+	margin-bottom: 0.8rem;
+}
+
+pre, code {
+	display: block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+	text-overflow: clip;
+	white-space: pre;
+	hyphens: none;
+	overflow-wrap: normal;
+
+	font-family: "JetBrains Mono", Menlo, "DejaVu Sans Mono", "Roboto Mono", Monaco, "Lucida Console", "Liberation Mono",
+		"Bitstream Vera Sans Mono", monospace, monospace, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
+	font-variation-settings: normal;
+	font-feature-settings:
+		"zero", /* slashed 0 */
+		"cv08", /* sharply connected k */
+		"cv18"; /* curly 2 6 and 9 */
+	font-optical-sizing: auto;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: 400;
+	
+	font-size: 16px;
+	line-height: 1.2;
+	text-rendering: geometricPrecision;
+
+	-webkit-user-select: text;
+	user-select: text;
 }
 
 /*
