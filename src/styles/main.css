@@ -1,8 +1,7 @@
 @import "../styles/sanitize.css";
 @import "../styles/sanitize-forms.css";
+@import "../styles/JetBrains-Mono.css";
 @import "../styles/code.css";
-@import "../styles/Hubot-Sans.css";
-@import "../styles/Mona-Sans.css";
 
 :root {
 	--color-foreground: rgb(30 15 15 / 0.75);
@@ -32,12 +31,18 @@ html {
 	overflow: visible;
 	overscroll-behavior: none;
 
-	font-family: "Mona Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+	font-family: "JetBrains Mono", monospace, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
 		"Noto Color Emoji";
 	font-variation-settings: normal;
-	font-feature-settings: /* see https://github.com/github/mona-sans */
-		"ss02" on, /* wide uppercase I */
-		"ss03" on; /* lowercase L with tail */
+	font-feature-settings:
+		"zero", /* slashed 0 */
+		"ss19", /* break equals ligatures */
+		"cv06", /* short m pp */
+		"cv07", /* lower middle connection on w */
+		"cv08", /* sharply connected k */
+		"cv11", /* curly tailed y */
+		"cv16", /* curly tailed Q */
+		"cv18"; /* curly 2 6 and 9 */
 	font-optical-sizing: auto;
 	font-stretch: normal;
 	font-style: normal;
@@ -45,25 +50,6 @@ html {
 
 	color: var(--color-foreground-text);
 	font-size: 16px; /* 18px */
-
-	/* font-family:
-		ui-sans-serif,
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		Roboto,
-		"Helvetica Neue",
-		Arial,
-		"Noto Sans",
-		sans-serif,
-		"Apple Color Emoji",
-		"Segoe UI Emoji",
-		"Segoe UI Symbol",
-		"Noto Color Emoji";
-	*/
-	/* font-family: "Oxygen", "Open Sans", "Noto Sans", "Helvetica Neue", Roboto, Arial, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
 
 body {
@@ -108,14 +94,6 @@ h3 {
 	margin-bottom: 0.2em;
 	line-height: 1;
 	text-align: center;
-
-	font-family: "Hubot Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-		"Noto Color Emoji";
-	font-variation-settings: normal;
-	font-feature-settings: normal;
-	font-optical-sizing: auto;
-	font-stretch: normal;
-	font-style: normal;
 }
 h1 {
 	font-size: 4rem;
