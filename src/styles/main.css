@@ -92,7 +92,6 @@ h4 {
 	margin: 0;
 	margin-bottom: 0.2em;
 	line-height: 1;
-	text-align: center;
 
 	font-feature-settings:
 		"zero",
@@ -109,11 +108,13 @@ h4 {
 		/* curly tailed Q */ "cv18"; /* curly 2 6 and 9 */
 }
 h1 {
+	text-align: center;
 	font-size: 4rem;
 	font-weight: 800;
 	color: var(--color-foreground-title);
 }
 h2 {
+	text-align: center;
 	font-size: 2.5rem;
 	font-weight: 700;
 	color: var(--color-foreground-heading);
