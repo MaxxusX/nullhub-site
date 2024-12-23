@@ -195,20 +195,12 @@ code {
 .pwrful {
 	font-weight: 800;
 	font-style: italic;
-	text-decoration: 5px rgb(255 0 0) solid underline;
+	text-decoration: 4px rgb(255 0 0) solid underline;
 }
 
 .imprtnt {
 	font-weight: 700;
 	text-decoration: 2px rgb(240 0 0) solid underline;
-	transition:
-		text-decoration-thickness 75ms ease-in-out,
-		text-decoration-color 75ms ease-in-out;
-
-	&:hover {
-		text-decoration-thickness: 4px;
-		text-decoration-color: rgb(245 0 0);
-	}
 }
 
 .lead {
