@@ -141,8 +141,12 @@ p {
 }
 
 ul, ol {
+	font-size: inherit;
 	margin-top: 0;
 	margin-bottom: 0.8rem;
+}
+li {
+	font-size: inherit;
 }
 
 abbr {
