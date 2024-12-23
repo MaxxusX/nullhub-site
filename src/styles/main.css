@@ -2,10 +2,10 @@
 @import "../styles/JetBrains-Mono.css";
 
 :root {
-	--color-foreground: rgb(30 15 15 / 0.75);
-	--color-foreground-selected: rgb(20 15 15 / 0.75);
-	--color-foreground-border: rgb(120 40 40 / 0.75);
-	--color-foreground-border-selected: rgb(180 40 40 / 0.75);
+	--color-foreground: rgb(20 15 15 / 0.75);
+	--color-foreground-selected: rgb(15 15 15 / 0.75);
+	--color-foreground-border: rgb(180 40 40 / 0.75);
+	--color-foreground-border-selected: rgb(220 40 40 / 0.75);
 	--color-foreground-ui: rgb(40 25 25 / 0.75);
 	--color-foreground-ui-selected: rgb(39 39 42 / 0.75);
 	--color-foreground-title: rgb(240 240 240);
@@ -166,7 +166,7 @@ pre {
 	padding-right: 10px;
 
 	border-style: solid;
-	border-color: #f009;
+	border-color: var(--color-foreground-border);
 	border-width: 2px;
 	border-radius: 0.375rem;
 
