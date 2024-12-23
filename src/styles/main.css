@@ -111,26 +111,26 @@ h1 {
 	font-size: 4rem;
 	font-weight: 800;
 	color: var(--color-foreground-title);
-	margin-bottom: 0.8rem;
+	margin-bottom: 1rem;
 }
 h2 {
 	text-align: center;
 	font-size: 2.5rem;
 	font-weight: 700;
 	color: var(--color-foreground-heading);
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 h3 {
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: var(--color-foreground-heading);
-	margin-bottom: 0.4rem;
+	margin-bottom: 0.8rem;
 }
 h4 {
 	font-size: 1.4rem;
 	font-weight: 500;
 	color: var(--color-foreground-heading);
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.5rem;
 }
 
 abbr {
