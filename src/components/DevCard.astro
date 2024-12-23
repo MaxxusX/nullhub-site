@@ -25,7 +25,10 @@ const { image, name, role, rolecolor } = Astro.props;
 	<div class="DevCard-About">
 		<div class="DevCard-Name-Container">
 			<h3 class="DevCard-Name">
-				<span translate="no">{name}</span><span class="DevCard-Role" style={`background-color: ${rolecolor};`}>{role}</span>
+				<span translate="no">{name}</span><span
+					class="DevCard-Role"
+					style={`background-color: ${rolecolor};`}>{role}</span
+				>
 			</h3>
 			<!-- <a class="DevCard-Link"><svg></svg></a> -->
 		</div>

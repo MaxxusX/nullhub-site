@@ -180,8 +180,8 @@
 :where(iframe) {
 	border-style: none;
 	border-color: transparent;
-	border-width: 0
-	
+	border-width: 0;
+
 	background: none;
 }
 

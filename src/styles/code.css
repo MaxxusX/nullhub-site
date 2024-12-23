@@ -11,9 +11,9 @@ pre {
 	hyphens: none;
 	overflow-wrap: normal;
 
-	font-family: Menlo, "DejaVu Sans Mono", "Roboto Mono", Monaco, "Lucida Console", "Liberation Mono",
-		"Bitstream Vera Sans Mono", monospace, monospace, "Apple Color Emoji", "Segoe UI Emoji",
-		"Segoe UI Symbol", "Noto Color Emoji";
+	font-family: Menlo, "DejaVu Sans Mono", "Roboto Mono", Monaco, "Lucida Console",
+		"Liberation Mono", "Bitstream Vera Sans Mono", monospace, monospace, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	font-size: 16px;
 	line-height: 24px;
 	text-rendering: geometricPrecision;
