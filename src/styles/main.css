@@ -140,7 +140,8 @@ p {
 	padding-bottom: 0;
 }
 
-ul, ol {
+ul,
+ol {
 	font-size: inherit;
 	margin-top: 0;
 	margin-bottom: 0.8rem;
